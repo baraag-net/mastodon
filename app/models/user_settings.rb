@@ -40,12 +40,12 @@ class UserSettings
   end
 
   namespace :notification_emails do
-    setting :follow, default: true
+    setting :follow, default: false
     setting :reblog, default: false
     setting :favourite, default: false
-    setting :mention, default: true
-    setting :quote, default: true
-    setting :follow_request, default: true
+    setting :mention, default: false
+    setting :quote, default: false
+    setting :follow_request, default: false
     setting :report, default: true
     setting :pending_account, default: true
     setting :trends, default: true

@@ -13,10 +13,10 @@ RSpec.describe 'Settings preferences notifications page' do
     expect(page)
       .to have_private_cache_control
 
-    uncheck notifications_follow_field
+    check notifications_follow_field
 
     expect { click_on submit_button }
-      .to change { user.reload.settings['notification_emails.follow'] }.to(false)
+      .to change { user.reload.settings['notification_emails.follow'] }.to(true)
     expect(page)
       .to have_title(I18n.t('settings.notifications'))
   end

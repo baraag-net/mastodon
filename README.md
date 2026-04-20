@@ -1,3 +1,10 @@
+## Fork changes
+
+- **Email notifications are off by default.** New users start with `notification_emails.follow`, `follow_request`, `reblog`, `favourite`, `mention`, and `quote` set to `false`.
+- **`DISABLE_EMAIL_NOTIFICATIONS_TOGGLE` env var.** When set to `true`, the user-facing email notification toggles (and `always_send_emails`) are hidden from `Settings → Notifications` and stripped server-side so they cannot be set via direct POST. Admin-only toggles (reports, appeals, pending accounts, trends, software updates) are unaffected.
+
+---
+
 > [!NOTE]
 > Want to learn more about Mastodon?
 > Click below to find out more in a video.
