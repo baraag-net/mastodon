@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_10_23_210145) do
+ActiveRecord::Schema[8.0].define(version: 2026_04_22_000000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -694,6 +694,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_23_210145) do
     t.integer "thumbnail_file_size"
     t.datetime "thumbnail_updated_at", precision: nil
     t.string "thumbnail_remote_url"
+    t.index "to_tsvector('simple'::regconfig, COALESCE(description, ''::text))", name: "index_media_attachments_on_description_tsv", using: :gin
     t.index ["account_id", "status_id"], name: "index_media_attachments_on_account_id_and_status_id", order: { status_id: :desc }
     t.index ["scheduled_status_id"], name: "index_media_attachments_on_scheduled_status_id", where: "(scheduled_status_id IS NOT NULL)"
     t.index ["shortcode"], name: "index_media_attachments_on_shortcode", unique: true, opclass: :text_pattern_ops, where: "(shortcode IS NOT NULL)"
@@ -1148,6 +1149,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_23_210145) do
     t.bigint "ordered_media_attachment_ids", array: true
     t.datetime "fetched_replies_at"
     t.integer "quote_approval_policy", default: 0, null: false
+    t.virtual "tsv", type: :tsvector, as: "(setweight(to_tsvector('simple'::regconfig, COALESCE(spoiler_text, ''::text)), 'A'::\"char\") || setweight(to_tsvector('simple'::regconfig, COALESCE(text, ''::text)), 'B'::\"char\"))", stored: true
     t.index ["account_id", "id", "visibility", "updated_at"], name: "index_statuses_20190820", order: { id: :desc }, where: "(deleted_at IS NULL)"
     t.index ["account_id"], name: "index_statuses_on_account_id"
     t.index ["conversation_id"], name: "index_statuses_on_conversation_id"
@@ -1157,6 +1159,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_23_210145) do
     t.index ["in_reply_to_account_id"], name: "index_statuses_on_in_reply_to_account_id", where: "(in_reply_to_account_id IS NOT NULL)"
     t.index ["in_reply_to_id"], name: "index_statuses_on_in_reply_to_id", where: "(in_reply_to_id IS NOT NULL)"
     t.index ["reblog_of_id", "account_id"], name: "index_statuses_on_reblog_of_id_and_account_id"
+    t.index ["tsv"], name: "index_statuses_on_tsv", using: :gin
     t.index ["uri"], name: "index_statuses_on_uri", unique: true, opclass: :text_pattern_ops, where: "(uri IS NOT NULL)"
   end
 

@@ -12,6 +12,44 @@ class SearchQueryTransformer < Parslet::Transform
     in
   ).freeze
 
+  POLL_OPTIONS_TSV_EXPRESSION = "to_tsvector('simple'::regconfig, array_to_string(polls.options, ' '::text))"
+  MEDIA_ATTACHMENTS_DESCRIPTION_TSV_EXPRESSION = "to_tsvector('simple'::regconfig, COALESCE(media_attachments.description, ''::text))"
+
+  def self.tsquery_tokens(text)
+    text.to_s.scan(/[\p{L}\p{N}_]+/)
+  end
+
+  def self.to_prefix_tsquery(text)
+    tokens = tsquery_tokens(text)
+    return if tokens.empty?
+
+    tokens.map { |token| "#{token}:*" }.join(' & ')
+  end
+
+  def self.to_phrase_tsquery(text)
+    tokens = tsquery_tokens(text)
+    return if tokens.empty?
+
+    last = tokens.pop
+    (tokens + ["#{last}:*"]).join(' <-> ')
+  end
+
+  def self.database_text_condition
+    <<~SQL.squish
+      statuses.tsv @@ to_tsquery('simple', :tsquery)
+      OR EXISTS (
+        SELECT 1 FROM polls
+        WHERE polls.id = statuses.poll_id
+          AND #{POLL_OPTIONS_TSV_EXPRESSION} @@ to_tsquery('simple', :tsquery)
+      )
+      OR EXISTS (
+        SELECT 1 FROM media_attachments
+        WHERE media_attachments.status_id = statuses.id
+          AND #{MEDIA_ATTACHMENTS_DESCRIPTION_TSV_EXPRESSION} @@ to_tsquery('simple', :tsquery)
+      )
+    SQL
+  end
+
   class Query
     def initialize(clauses, options = {})
       raise ArgumentError if options[:current_account].nil?
@@ -30,6 +68,18 @@ class SearchQueryTransformer < Parslet::Transform
       filter_clauses.each { |clause| search = search.filter(**clause.to_query) }
 
       search
+    end
+
+    def database_scope
+      return Status.none if content_clauses.empty? && filter_clauses.empty? && @flags.empty?
+
+      scope = base_database_scope
+
+      must_clauses.each { |clause| scope = clause.apply(scope) }
+      must_not_clauses.each { |clause| scope = clause.apply(scope) }
+      filter_clauses.each { |clause| scope = clause.apply(scope) }
+
+      scope
     end
 
     private
@@ -52,6 +102,49 @@ class SearchQueryTransformer < Parslet::Transform
 
     def filter_clauses
       clauses_by_operator.fetch(:filter, [])
+    end
+
+    def content_clauses
+      must_clauses + must_not_clauses
+    end
+
+    def base_database_scope
+      scope = Status.unscoped.kept.without_reblogs
+
+      case @flags['in']
+      when 'library'
+        sql, binds = library_conditions
+        scope = scope.where(sql, binds)
+      when 'public'
+        sql, binds = public_conditions
+        scope = scope.where(sql, binds)
+      else
+        library_sql, library_binds = library_conditions
+        public_sql, public_binds = public_conditions
+        scope = scope.where("(#{public_sql}) OR (#{library_sql})", public_binds.merge(library_binds))
+      end
+
+      scope.order(id: :desc)
+    end
+
+    def public_conditions
+      [
+        'statuses.visibility = :public_visibility AND EXISTS (SELECT 1 FROM accounts WHERE accounts.id = statuses.account_id AND accounts.indexable = TRUE)',
+        { public_visibility: Status.visibilities[:public] },
+      ]
+    end
+
+    def library_conditions
+      sql = <<~SQL.squish
+        (statuses.account_id = :current_account_id AND (statuses.local = TRUE OR statuses.uri IS NULL))
+        OR EXISTS (SELECT 1 FROM mentions WHERE mentions.status_id = statuses.id AND mentions.account_id = :current_account_id AND mentions.silent = FALSE)
+        OR EXISTS (SELECT 1 FROM favourites WHERE favourites.status_id = statuses.id AND favourites.account_id = :current_account_id)
+        OR EXISTS (SELECT 1 FROM bookmarks WHERE bookmarks.status_id = statuses.id AND bookmarks.account_id = :current_account_id)
+        OR EXISTS (SELECT 1 FROM poll_votes WHERE poll_votes.poll_id = statuses.poll_id AND poll_votes.account_id = :current_account_id)
+        OR EXISTS (SELECT 1 FROM statuses reblogs WHERE reblogs.reblog_of_id = statuses.id AND reblogs.account_id = :current_account_id AND reblogs.deleted_at IS NULL)
+      SQL
+
+      [sql, { current_account_id: @options[:current_account].id }]
     end
 
     def indexes
@@ -128,6 +221,20 @@ class SearchQueryTransformer < Parslet::Transform
         { multi_match: { type: 'most_fields', query: @term, fields: ['text', 'text.stemmed'], operator: 'and' } }
       end
     end
+
+    def apply(scope)
+      if @term.start_with?('#')
+        tag = @term.delete_prefix('#')
+        condition = 'EXISTS (SELECT 1 FROM statuses_tags st JOIN tags t ON t.id = st.tag_id WHERE st.status_id = statuses.id AND LOWER(t.name) = LOWER(?))'
+        @operator == :must_not ? scope.where.not(condition, tag) : scope.where(condition, tag)
+      else
+        tsquery = SearchQueryTransformer.to_prefix_tsquery(@term)
+        return scope if tsquery.nil?
+
+        condition = SearchQueryTransformer.database_text_condition
+        @operator == :must_not ? scope.where("NOT (#{condition})", tsquery: tsquery) : scope.where(condition, tsquery: tsquery)
+      end
+    end
   end
 
   class PhraseClause
@@ -141,15 +248,36 @@ class SearchQueryTransformer < Parslet::Transform
     def to_query
       { match_phrase: { text: { query: @phrase } } }
     end
+
+    def apply(scope)
+      tsquery = SearchQueryTransformer.to_phrase_tsquery(@phrase)
+      return scope if tsquery.nil?
+
+      condition = SearchQueryTransformer.database_text_condition
+      @operator == :must_not ? scope.where("NOT (#{condition})", tsquery: tsquery) : scope.where(condition, tsquery: tsquery)
+    end
   end
 
   class PrefixClause
     EPOCH_RE = /\A\d+\z/
 
+    PROPERTY_CONDITIONS = {
+      'media' => 'EXISTS (SELECT 1 FROM media_attachments WHERE media_attachments.status_id = statuses.id)',
+      'image' => "EXISTS (SELECT 1 FROM media_attachments WHERE media_attachments.status_id = statuses.id AND media_attachments.file_content_type LIKE 'image/%')",
+      'video' => "EXISTS (SELECT 1 FROM media_attachments WHERE media_attachments.status_id = statuses.id AND media_attachments.file_content_type LIKE 'video/%')",
+      'audio' => "EXISTS (SELECT 1 FROM media_attachments WHERE media_attachments.status_id = statuses.id AND media_attachments.file_content_type LIKE 'audio/%')",
+      'poll' => 'statuses.poll_id IS NOT NULL',
+      'link' => 'EXISTS (SELECT 1 FROM preview_cards_statuses WHERE preview_cards_statuses.status_id = statuses.id)',
+      'sensitive' => 'statuses.sensitive = TRUE',
+      'reply' => 'statuses.reply = TRUE',
+      'quote' => 'EXISTS (SELECT 1 FROM quotes WHERE quotes.status_id = statuses.id)',
+    }.freeze
+
     attr_reader :operator, :prefix, :term
 
     def initialize(prefix, operator, term, options = {})
       @prefix = prefix
+      @raw_term = term
       @negated = operator == '-'
       @options = options
       @operator = :filter
@@ -195,7 +323,49 @@ class SearchQueryTransformer < Parslet::Transform
       end
     end
 
+    def apply(scope)
+      return scope if @operator == :flag
+
+      sql, *binds = database_condition
+      return scope if sql.nil?
+
+      @negated ? scope.where.not(sql, *binds) : scope.where(sql, *binds)
+    end
+
     private
+
+    def database_condition
+      case @prefix
+      when 'has', 'is'
+        property_condition
+      when 'language'
+        ['statuses.language = ?', @term]
+      when 'from'
+        ['statuses.account_id = ?', @term]
+      when 'before'
+        ['statuses.created_at < ?', parse_date(@raw_term)]
+      when 'after'
+        ['statuses.created_at > ?', parse_date(@raw_term)]
+      when 'during'
+        date = parse_date(@raw_term)
+        ['statuses.created_at >= ? AND statuses.created_at < ?', date, date + 1.day]
+      end
+    end
+
+    def property_condition
+      case @raw_term.to_s.downcase
+      when 'embed'
+        ['EXISTS (SELECT 1 FROM preview_cards_statuses pcs JOIN preview_cards pc ON pc.id = pcs.preview_card_id WHERE pcs.status_id = statuses.id AND pc.type = ?)', PreviewCard.types[:video]]
+      else
+        [PROPERTY_CONDITIONS.fetch(@raw_term.to_s.downcase, '1=0')]
+      end
+    end
+
+    def parse_date(term)
+      return Time.zone.at(term.to_i) if term.match?(EPOCH_RE)
+
+      DateTime.iso8601(term)
+    end
 
     def account_id_from_term(term)
       return @options[:current_account]&.id || -1 if term == 'me'

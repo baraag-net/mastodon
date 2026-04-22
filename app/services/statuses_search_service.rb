@@ -1,6 +1,22 @@
 # frozen_string_literal: true
 
 class StatusesSearchService < BaseService
+  def self.database_backend_enabled?
+    ActiveModel::Type::Boolean.new.cast(ENV.fetch('DB_SEARCH_ENABLED', 'true'))
+  end
+
+  def self.database_backend_available?
+    return false unless database_backend_enabled?
+
+    Status.columns_hash.key?('tsv')
+  rescue ActiveRecord::NoDatabaseError, ActiveRecord::StatementInvalid
+    false
+  end
+
+  def self.backend_available?
+    Chewy.enabled? || database_backend_available?
+  end
+
   def call(query, account = nil, options = {})
     MastodonOTELTracer.in_span('StatusesSearchService#call') do |span|
       @query   = query&.strip
@@ -13,7 +29,7 @@ class StatusesSearchService < BaseService
       span.add_attributes(
         'search.offset' => @offset,
         'search.limit' => @limit,
-        'search.backend' => Chewy.enabled? ? 'elasticsearch' : 'database'
+        'search.backend' => search_backend
       )
 
       status_search_results.tap do |results|
@@ -25,8 +41,9 @@ class StatusesSearchService < BaseService
   private
 
   def status_search_results
-    request             = parsed_query.request
-    results             = request.collapse(field: :id).order(id: { order: :desc }).limit(@limit).offset(@offset).objects.compact
+    results = fetch_results
+    return [] if results.empty?
+
     account_ids         = results.map(&:account_id)
     account_domains     = results.map(&:account_domain)
     preloaded_relations = @account.relations_map(account_ids, account_domains)
@@ -34,6 +51,34 @@ class StatusesSearchService < BaseService
     results.reject { |status| StatusFilter.new(status, @account, preloaded_relations).filtered? }
   rescue Faraday::ConnectionFailed, Parslet::ParseFailed, Errno::ENETUNREACH
     []
+  end
+
+  def fetch_results
+    if Chewy.enabled?
+      elasticsearch_results
+    elsif self.class.database_backend_available?
+      database_results
+    else
+      []
+    end
+  end
+
+  def search_backend
+    if Chewy.enabled?
+      'elasticsearch'
+    elsif self.class.database_backend_available?
+      'database'
+    else
+      'disabled'
+    end
+  end
+
+  def elasticsearch_results
+    parsed_query.request.collapse(field: :id).order(id: { order: :desc }).limit(@limit).offset(@offset).objects.compact
+  end
+
+  def database_results
+    parsed_query.database_scope.limit(@limit).offset(@offset).includes(:account).to_a
   end
 
   def parsed_query

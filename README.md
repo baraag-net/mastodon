@@ -3,6 +3,7 @@
 - **Email notifications are off by default.** New users start with `notification_emails.follow`, `follow_request`, `reblog`, `favourite`, `mention`, and `quote` set to `false`. (`42e9553`)
 - **`DISABLE_EMAIL_NOTIFICATIONS_TOGGLE` env var.** When set to `true`, the user-facing email notification toggles (and `always_send_emails`) are hidden from `Settings → Notifications` and stripped server-side so they cannot be set via direct POST. Admin-only toggles (reports, appeals, pending accounts, trends, software updates) are unaffected. (`42e9553`)
 - **Manual review sign-up edit.** The `sign_up.manual_review` string in all locale files now instructs applicants that they must provide links to examples of their art or their application will be rejected. (`7f6a781`)
+- **PostgreSQL full-text status search fallback.** When Elasticsearch is disabled, status search can fall back to PostgreSQL full-text search. This is controlled by `DB_SEARCH_ENABLED`, which defaults to `true`.
 
 ---
 

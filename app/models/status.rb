@@ -29,6 +29,7 @@
 #  ordered_media_attachment_ids :bigint(8)        is an Array
 #  fetched_replies_at           :datetime
 #  quote_approval_policy        :integer          default(0), not null
+#  tsv                          :tsvector
 #
 
 class Status < ApplicationRecord
