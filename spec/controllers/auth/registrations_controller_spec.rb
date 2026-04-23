@@ -259,6 +259,10 @@ RSpec.describe Auth::RegistrationsController do
         post :create, params: { user: { account_attributes: { username: 'test' }, email: 'test@example.com', password: '12345678', password_confirmation: '12345678', agreement: 'true', invite_request_attributes: { text: 'Portfolio: https://example.com/@test' } } }
       end
 
+      before do
+        allow(Rails.configuration.x).to receive(:disable_registration_reason_url_requirement).and_return(false)
+      end
+
       it 'redirects to setup and creates user' do
         subject
 
@@ -281,12 +285,42 @@ RSpec.describe Auth::RegistrationsController do
         post :create, params: { user: { account_attributes: { username: 'test' }, email: 'test@example.com', password: '12345678', password_confirmation: '12345678', agreement: 'true', invite_request_attributes: { text: '' } } }
       end
 
+      before do
+        allow(Rails.configuration.x).to receive(:disable_registration_reason_url_requirement).and_return(false)
+      end
+
       it 're-renders the form and does not create user' do
         expect { subject }
           .to_not change(User, :count)
 
         expect(response).to have_http_status(:success)
-        expect(response.body).to include(I18n.t('activerecord.errors.models.user_invite_request.attributes.text.missing_url'))
+        expect(response.body).to include(I18n.t('activerecord.errors.models.user_invite_request.attributes.text.missing_url', locale: accept_language))
+      end
+    end
+
+    context 'with Approval-based registrations when the URL requirement is disabled' do
+      subject do
+        Setting.registrations_mode = 'approved'
+        request.headers['Accept-Language'] = accept_language
+        post :create, params: { user: { account_attributes: { username: 'test' }, email: 'test@example.com', password: '12345678', password_confirmation: '12345678', agreement: 'true', invite_request_attributes: { text: '' } } }
+      end
+
+      before do
+        allow(Rails.configuration.x).to receive(:disable_registration_reason_url_requirement).and_return(true)
+      end
+
+      it 'redirects to setup and creates user without a URL' do
+        subject
+
+        expect(response)
+          .to redirect_to auth_setup_path
+
+        expect(User.find_by(email: 'test@example.com'))
+          .to be_present
+          .and have_attributes(
+            locale: eq(accept_language),
+            approved: be(false)
+          )
       end
     end
 
@@ -296,6 +330,10 @@ RSpec.describe Auth::RegistrationsController do
         request.headers['Accept-Language'] = accept_language
         invite = Fabricate(:invite, max_uses: nil, expires_at: 1.hour.ago)
         post :create, params: { user: { account_attributes: { username: 'test' }, email: 'test@example.com', password: '12345678', password_confirmation: '12345678', invite_code: invite.code, agreement: 'true', invite_request_attributes: { text: 'Portfolio: https://example.com/@test' } } }
+      end
+
+      before do
+        allow(Rails.configuration.x).to receive(:disable_registration_reason_url_requirement).and_return(false)
       end
 
       it 'redirects to setup and creates user' do

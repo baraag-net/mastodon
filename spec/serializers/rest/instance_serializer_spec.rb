@@ -28,4 +28,30 @@ RSpec.describe REST::InstanceSerializer do
         )
     end
   end
+
+  describe 'registrations' do
+    before do
+      Setting.registrations_mode = 'approved'
+      Setting.require_invite_text = false
+    end
+
+    it 'reports the URL requirement when enabled' do
+      allow(Rails.configuration.x).to receive(:disable_registration_reason_url_requirement).and_return(false)
+
+      expect(serialization['registrations']).to include('reason_required' => true)
+    end
+
+    it 'falls back to the invite text setting when the URL requirement is disabled' do
+      allow(Rails.configuration.x).to receive(:disable_registration_reason_url_requirement).and_return(true)
+
+      expect(serialization['registrations']).to include('reason_required' => false)
+    end
+
+    it 'still reports a required reason when invite text is required' do
+      allow(Rails.configuration.x).to receive(:disable_registration_reason_url_requirement).and_return(true)
+      Setting.require_invite_text = true
+
+      expect(serialization['registrations']).to include('reason_required' => true)
+    end
+  end
 end

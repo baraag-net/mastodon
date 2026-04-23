@@ -190,6 +190,7 @@ RSpec.describe '/api/v1/accounts' do
 
       before do
         Setting.registrations_mode = 'approved'
+        allow(Rails.configuration.x).to receive(:disable_registration_reason_url_requirement).and_return(false)
       end
 
       context 'when the reason does not include a full URL' do
@@ -228,6 +229,25 @@ RSpec.describe '/api/v1/accounts' do
           expect(user.approved?).to be(false)
           expect(user.invite_request&.text).to eq(reason)
         end
+      end
+    end
+
+    context 'when registrations require approval and the URL requirement is disabled' do
+      let(:agreement) { 'true' }
+
+      before do
+        Setting.registrations_mode = 'approved'
+        allow(Rails.configuration.x).to receive(:disable_registration_reason_url_requirement).and_return(true)
+      end
+
+      it 'creates a user without a reason URL', :aggregate_failures do
+        expect { subject }
+          .to change(User, :count).by(1)
+          .and change(Account, :count).by(1)
+
+        expect(response).to have_http_status(200)
+        expect(response.content_type)
+          .to start_with('application/json')
       end
     end
   end

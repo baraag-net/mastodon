@@ -7,8 +7,12 @@ module RegistrationHelper
     !Rails.configuration.x.single_user_mode && !omniauth_only? && (registrations_open? || invite&.valid_for_use?) && !ip_blocked?(remote_ip)
   end
 
+  def registration_reason_url_requirement_enabled?
+    !Rails.configuration.x.disable_registration_reason_url_requirement
+  end
+
   def invite_request_url_required?(invite)
-    Setting.registrations_mode == 'approved' && !invite&.valid_for_use?
+    registration_reason_url_requirement_enabled? && Setting.registrations_mode == 'approved' && !invite&.valid_for_use?
   end
 
   def registrations_open?

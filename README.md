@@ -3,7 +3,8 @@
 - **Email notifications are off by default.** New users start with `notification_emails.follow`, `follow_request`, `reblog`, `favourite`, `mention`, and `quote` set to `false`. (`42e9553`)
 - **`DISABLE_EMAIL_NOTIFICATIONS_TOGGLE` env var.** When set to `true`, the user-facing email notification toggles (and `always_send_emails`) are hidden from `Settings → Notifications` and stripped server-side so they cannot be set via direct POST. Admin-only toggles (reports, appeals, pending accounts, trends, software updates) are unaffected. (`42e9553`)
 - **Manual review sign-up edit.** The `sign_up.manual_review` string in all locale files now instructs applicants that they must provide links to examples of their art or their application will be rejected. (`7f6a781`)
-- **Manual review URL requirement is enforced server-side.** On approval-based sign-ups without a valid invite, applicants must include at least one full URL in their reason. This is enforced for both the web sign-up flow and `/api/v1/accounts`.
+- **Manual review URL requirement is enforced server-side by default.** On approval-based sign-ups without a valid invite, applicants must include at least one full URL in their reason. This is enforced for both the web sign-up flow and `/api/v1/accounts`. (`2026af3`)
+- **`DISABLE_REGISTRATION_REASON_URL_REQUIREMENT` env var.** When set to `true`, approval-based sign-ups fall back to upstream `require_invite_text` behavior instead of requiring a full URL in the application reason.
 
 ---
 
