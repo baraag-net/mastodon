@@ -65,7 +65,7 @@ fi:
         user_invite_request:
           attributes:
             text:
-              missing_url: sisällytä vähintään yksi täydellinen URL-osoite
+              missing_url: Lue säännöt
         user_role:
           attributes:
             permissions_as_keys:

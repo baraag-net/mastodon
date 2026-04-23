@@ -65,7 +65,7 @@ tr:
         user_invite_request:
           attributes:
             text:
-              missing_url: en az bir tam URL içermelidir
+              missing_url: Kuralları okuyun
         user_role:
           attributes:
             permissions_as_keys:

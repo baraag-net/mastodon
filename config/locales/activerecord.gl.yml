@@ -65,7 +65,7 @@ gl:
         user_invite_request:
           attributes:
             text:
-              missing_url: debe incluír polo menos unha URL completa
+              missing_url: Le as regras
         user_role:
           attributes:
             permissions_as_keys:

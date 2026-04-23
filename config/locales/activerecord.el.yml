@@ -65,7 +65,7 @@ el:
         user_invite_request:
           attributes:
             text:
-              missing_url: πρέπει να περιλαμβάνει τουλάχιστον μία πλήρη διεύθυνση URL
+              missing_url: Διαβάστε τους κανόνες
         user_role:
           attributes:
             permissions_as_keys:

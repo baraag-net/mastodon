@@ -50,7 +50,7 @@
         user_invite_request:
           attributes:
             text:
-              missing_url: må inneholde minst én fullstendig URL
+              missing_url: Les reglene
         user_role:
           attributes:
             permissions_as_keys:

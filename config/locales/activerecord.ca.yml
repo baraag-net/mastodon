@@ -65,7 +65,7 @@ ca:
         user_invite_request:
           attributes:
             text:
-              missing_url: ha d'incloure almenys una URL completa
+              missing_url: Llegeix les normes
         user_role:
           attributes:
             permissions_as_keys:

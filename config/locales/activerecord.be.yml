@@ -65,7 +65,7 @@ be:
         user_invite_request:
           attributes:
             text:
-              missing_url: мусіць утрымліваць прынамсі адну поўную URL-спасылку
+              missing_url: Прачытайце правілы
         user_role:
           attributes:
             permissions_as_keys:

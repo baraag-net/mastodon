@@ -65,7 +65,7 @@ ga:
         user_invite_request:
           attributes:
             text:
-              missing_url: caithfidh URL iomlán amháin ar a laghad a bheith san áireamh
+              missing_url: Léigh na rialacha
         user_role:
           attributes:
             permissions_as_keys:

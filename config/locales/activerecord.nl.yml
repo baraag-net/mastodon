@@ -65,7 +65,7 @@ nl:
         user_invite_request:
           attributes:
             text:
-              missing_url: moet ten minste één volledige URL bevatten
+              missing_url: Lees de regels
         user_role:
           attributes:
             permissions_as_keys:

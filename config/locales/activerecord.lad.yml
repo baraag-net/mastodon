@@ -52,7 +52,7 @@ lad:
         user_invite_request:
           attributes:
             text:
-              missing_url: deve inkluir al manko un URL kompleto
+              missing_url: Meldá las reglas
         user_role:
           attributes:
             permissions_as_keys:

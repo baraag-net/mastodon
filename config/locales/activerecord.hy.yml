@@ -33,4 +33,4 @@ hy:
         user_invite_request:
           attributes:
             text:
-              missing_url: պէտք է պարունակի առնուազն մէկ ամբողջական URL
+              missing_url: Կարդացէ՛ք կանոնները

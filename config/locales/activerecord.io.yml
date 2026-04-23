@@ -59,7 +59,7 @@ io:
         user_invite_request:
           attributes:
             text:
-              missing_url: mustas inkluzar adminime un kompleta URL
+              missing_url: Lektez la reguli
         user_role:
           attributes:
             permissions_as_keys:

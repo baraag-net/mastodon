@@ -65,7 +65,7 @@ vi:
         user_invite_request:
           attributes:
             text:
-              missing_url: phải bao gồm ít nhất một URL đầy đủ
+              missing_url: Đọc nội quy
         user_role:
           attributes:
             permissions_as_keys:

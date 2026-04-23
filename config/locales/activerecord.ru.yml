@@ -65,7 +65,7 @@ ru:
         user_invite_request:
           attributes:
             text:
-              missing_url: должна содержать хотя бы одну полную ссылку
+              missing_url: Прочитайте правила
         user_role:
           attributes:
             permissions_as_keys:

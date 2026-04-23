@@ -65,7 +65,7 @@ eo:
         user_invite_request:
           attributes:
             text:
-              missing_url: devas enhavi almenaŭ unu plenan URL
+              missing_url: Legu la regulojn
         user_role:
           attributes:
             permissions_as_keys:

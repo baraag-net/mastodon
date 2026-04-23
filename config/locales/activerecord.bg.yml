@@ -65,7 +65,7 @@ bg:
         user_invite_request:
           attributes:
             text:
-              missing_url: трябва да включва поне един пълен URL адрес
+              missing_url: Прочетете правилата
         user_role:
           attributes:
             permissions_as_keys:

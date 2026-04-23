@@ -65,7 +65,7 @@ nn:
         user_invite_request:
           attributes:
             text:
-              missing_url: må innehalda minst éin fullstendig URL
+              missing_url: Les reglane
         user_role:
           attributes:
             permissions_as_keys:

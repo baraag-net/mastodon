@@ -47,7 +47,7 @@ my:
         user_invite_request:
           attributes:
             text:
-              missing_url: အနည်းဆုံး URL အပြည့်အစုံ တစ်ခု ပါရှိရမည်
+              missing_url: စည်းမျဉ်းများကို ဖတ်ပါ
         user_role:
           attributes:
             permissions_as_keys:

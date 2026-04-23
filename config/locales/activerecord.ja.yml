@@ -65,7 +65,7 @@ ja:
         user_invite_request:
           attributes:
             text:
-              missing_url: 完全な URL を少なくとも 1 つ含める必要があります
+              missing_url: ルールを読んでください
         user_role:
           attributes:
             permissions_as_keys:

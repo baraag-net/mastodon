@@ -65,7 +65,7 @@ ko:
         user_invite_request:
           attributes:
             text:
-              missing_url: 최소한 하나의 전체 URL을 포함해야 합니다
+              missing_url: 규칙을 읽으세요
         user_role:
           attributes:
             permissions_as_keys:

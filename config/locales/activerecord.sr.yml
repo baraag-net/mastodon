@@ -47,7 +47,7 @@ sr:
         user_invite_request:
           attributes:
             text:
-              missing_url: мора да садржи најмање један потпуни URL
+              missing_url: Прочитај правила
         user_role:
           attributes:
             permissions_as_keys:

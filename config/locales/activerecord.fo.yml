@@ -65,7 +65,7 @@ fo:
         user_invite_request:
           attributes:
             text:
-              missing_url: skal hava í minsta lagi eina fulla URL-adressu
+              missing_url: Les reglurnar
         user_role:
           attributes:
             permissions_as_keys:

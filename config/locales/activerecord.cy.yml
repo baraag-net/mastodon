@@ -65,7 +65,7 @@ cy:
         user_invite_request:
           attributes:
             text:
-              missing_url: rhaid cynnwys o leiaf un URL llawn
+              missing_url: Darllenwch y rheolau
         user_role:
           attributes:
             permissions_as_keys:

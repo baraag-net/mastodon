@@ -65,7 +65,7 @@ da:
         user_invite_request:
           attributes:
             text:
-              missing_url: skal indeholde mindst én komplet URL
+              missing_url: Læs reglerne
         user_role:
           attributes:
             permissions_as_keys:

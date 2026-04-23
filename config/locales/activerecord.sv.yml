@@ -65,7 +65,7 @@ sv:
         user_invite_request:
           attributes:
             text:
-              missing_url: måste innehålla minst en fullständig URL
+              missing_url: Läs reglerna
         user_role:
           attributes:
             permissions_as_keys:

@@ -65,7 +65,7 @@ sq:
         user_invite_request:
           attributes:
             text:
-              missing_url: duhet të përmbajë të paktën një URL të plotë
+              missing_url: Lexoni rregullat
         user_role:
           attributes:
             permissions_as_keys:

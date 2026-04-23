@@ -65,7 +65,7 @@ fy:
         user_invite_request:
           attributes:
             text:
-              missing_url: moat op syn minst ien folsleine URL befetsje
+              missing_url: Lês de regels
         user_role:
           attributes:
             permissions_as_keys:

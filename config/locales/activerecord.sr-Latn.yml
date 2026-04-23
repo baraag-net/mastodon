@@ -47,7 +47,7 @@ sr-Latn:
         user_invite_request:
           attributes:
             text:
-              missing_url: mora da sadrži najmanje jedan potpuni URL
+              missing_url: Pročitaj pravila
         user_role:
           attributes:
             permissions_as_keys:

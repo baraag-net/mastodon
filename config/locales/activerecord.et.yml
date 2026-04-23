@@ -65,7 +65,7 @@ et:
         user_invite_request:
           attributes:
             text:
-              missing_url: peab sisaldama vähemalt ühte täielikku URL-i
+              missing_url: Loe reegleid
         user_role:
           attributes:
             permissions_as_keys:

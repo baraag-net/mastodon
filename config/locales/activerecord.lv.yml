@@ -65,7 +65,7 @@ lv:
         user_invite_request:
           attributes:
             text:
-              missing_url: ir jāiekļauj vismaz viens pilns URL
+              missing_url: Izlasiet noteikumus
         user_role:
           attributes:
             permissions_as_keys:

@@ -65,7 +65,7 @@ he:
         user_invite_request:
           attributes:
             text:
-              missing_url: חייב לכלול כתובת URL מלאה אחת לפחות
+              missing_url: קרא את הכללים
         user_role:
           attributes:
             permissions_as_keys:

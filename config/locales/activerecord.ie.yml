@@ -47,7 +47,7 @@ ie:
         user_invite_request:
           attributes:
             text:
-              missing_url: deve includer al minim un complet URL
+              missing_url: Lee li regules
         user_role:
           attributes:
             permissions_as_keys:

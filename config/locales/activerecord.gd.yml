@@ -65,7 +65,7 @@ gd:
         user_invite_request:
           attributes:
             text:
-              missing_url: feumaidh co-dhiù aon URL slàn a bhith ann
+              missing_url: Leugh na riaghailtean
         user_role:
           attributes:
             permissions_as_keys:

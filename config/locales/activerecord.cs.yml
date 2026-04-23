@@ -65,7 +65,7 @@ cs:
         user_invite_request:
           attributes:
             text:
-              missing_url: musí obsahovat alespoň jednu úplnou URL adresu
+              missing_url: Přečtěte si pravidla
         user_role:
           attributes:
             permissions_as_keys:

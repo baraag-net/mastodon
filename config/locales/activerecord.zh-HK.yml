@@ -47,7 +47,7 @@ zh-HK:
         user_invite_request:
           attributes:
             text:
-              missing_url: 必須包含至少一個完整的 URL
+              missing_url: 閱讀規則
         user_role:
           attributes:
             permissions_as_keys:

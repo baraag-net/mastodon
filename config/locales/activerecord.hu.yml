@@ -65,7 +65,7 @@ hu:
         user_invite_request:
           attributes:
             text:
-              missing_url: legalább egy teljes URL-t kell tartalmaznia
+              missing_url: Olvasd el a szabályokat
         user_role:
           attributes:
             permissions_as_keys:

@@ -61,7 +61,7 @@ uk:
         user_invite_request:
           attributes:
             text:
-              missing_url: має містити принаймні одне повне посилання
+              missing_url: Прочитайте правила
         user_role:
           attributes:
             permissions_as_keys:

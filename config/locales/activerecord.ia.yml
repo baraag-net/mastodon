@@ -65,7 +65,7 @@ ia:
         user_invite_request:
           attributes:
             text:
-              missing_url: debe includer al minus un URL complete
+              missing_url: Lege le regulas
         user_role:
           attributes:
             permissions_as_keys:

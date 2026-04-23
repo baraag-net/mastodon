@@ -65,7 +65,7 @@ is:
         user_invite_request:
           attributes:
             text:
-              missing_url: verður að innihalda a.m.k. eina fullgilda vefslóð
+              missing_url: Lestu reglurnar
         user_role:
           attributes:
             permissions_as_keys:

@@ -65,7 +65,7 @@ sl:
         user_invite_request:
           attributes:
             text:
-              missing_url: mora vsebovati vsaj en popoln URL
+              missing_url: Preberi pravila
         user_role:
           attributes:
             permissions_as_keys:

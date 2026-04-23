@@ -57,7 +57,7 @@ th:
         user_invite_request:
           attributes:
             text:
-              missing_url: ต้องมี URL แบบเต็มอย่างน้อยหนึ่งรายการ
+              missing_url: อ่านกฎ
         user_role:
           attributes:
             permissions_as_keys:

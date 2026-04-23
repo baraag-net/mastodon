@@ -65,7 +65,7 @@ zh-CN:
         user_invite_request:
           attributes:
             text:
-              missing_url: 必须包含至少一个完整的 URL
+              missing_url: 阅读规则
         user_role:
           attributes:
             permissions_as_keys:

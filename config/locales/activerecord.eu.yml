@@ -65,7 +65,7 @@ eu:
         user_invite_request:
           attributes:
             text:
-              missing_url: gutxienez URL oso bat izan behar du
+              missing_url: Irakurri arauak
         user_role:
           attributes:
             permissions_as_keys:

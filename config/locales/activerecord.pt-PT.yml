@@ -65,7 +65,7 @@ pt-PT:
         user_invite_request:
           attributes:
             text:
-              missing_url: tem de incluir pelo menos um URL completo
+              missing_url: Lê as regras
         user_role:
           attributes:
             permissions_as_keys:

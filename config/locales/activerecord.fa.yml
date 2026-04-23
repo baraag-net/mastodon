@@ -65,7 +65,7 @@ fa:
         user_invite_request:
           attributes:
             text:
-              missing_url: باید حداقل یک نشانی اینترنتی کامل داشته باشد
+              missing_url: قوانین را بخوانید
         user_role:
           attributes:
             permissions_as_keys:

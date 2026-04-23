@@ -65,7 +65,7 @@ ms:
         user_invite_request:
           attributes:
             text:
-              missing_url: mesti menyertakan sekurang-kurangnya satu URL lengkap
+              missing_url: Baca peraturan
         user_role:
           attributes:
             permissions_as_keys:
