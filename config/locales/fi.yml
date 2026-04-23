@@ -1288,7 +1288,7 @@ fi:
       preamble_html: Kirjaudu <strong>%{domain}</strong>-tunnuksellasi. Jos tilisi on eri palvelimella, et voi kirjautua tässä.
       title: Kirjaudu palvelimelle %{domain}
     sign_up:
-      manual_review: Palvelimen %{domain} ylläpito tarkastaa rekisteröitymiset käsin. Helpottaaksesi rekisteröitymisesi käsittelyä sinun on annettava linkkejä esimerkkeihin taiteestasi, muuten hakemuksesi hylätään.
+      manual_review: Palvelimen %{domain} ylläpito tarkastaa rekisteröitymiset käsin. Helpottaaksesi rekisteröitymisesi käsittelyä sinun on annettava linkkejä esimerkkeihin taiteestasi, muuten hakemuksesi hylätään. Anna vähintään yksi täydellinen URL-osoite.
       preamble: Kun sinulla on tili tällä Mastodon-palvelimella, voit seurata kaikkia muita fediversumin käyttäjiä riippumatta siitä, missä heidän tilinsä on.
       title: Otetaan %{domain} käyttöösi.
     status:

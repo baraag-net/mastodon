@@ -44,6 +44,10 @@ sr:
               unreachable: изгледа да не постоји
             role_id:
               elevated: не може бити више са вашом тренутном улогом
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: мора да садржи најмање један потпуни URL
         user_role:
           attributes:
             permissions_as_keys:

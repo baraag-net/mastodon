@@ -1310,7 +1310,7 @@ pl:
       preamble_html: Zaloguj się przy użyciu danych logowania <strong>%{domain}</strong>. Jeśli Twoje konto jest hostowane na innym serwerze, nie będziesz mógł się zalogować tutaj.
       title: Zaloguj się do %{domain}
     sign_up:
-      manual_review: Rejestracja na %{domain} przechodzi przez ręczne sprawdzanie przez naszych moderatorów. Aby pomóc nam usprawnić ten proces, musisz podać linki do przykładów swojej sztuki, w przeciwnym razie Twoje zgłoszenie zostanie odrzucone.
+      manual_review: Rejestracja na %{domain} przechodzi przez ręczne sprawdzanie przez naszych moderatorów. Aby pomóc nam usprawnić ten proces, musisz podać linki do przykładów swojej sztuki, w przeciwnym razie Twoje zgłoszenie zostanie odrzucone. Dołącz co najmniej jeden pełny adres URL.
       preamble: Z kontem na tym serwerze Mastodon będziesz mógł obserwować każdą inną osobę w sieci, niezależnie od miejsca przechowywania ich konta.
       title: Skonfigurujmy Twoje konto na %{domain}.
     status:

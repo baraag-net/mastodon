@@ -62,6 +62,10 @@ he:
               unreachable: נראה שלא קיים
             role_id:
               elevated: לא יכול להיות גבוה יותר מתפקידך הנוכחי
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: חייב לכלול כתובת URL מלאה אחת לפחות
         user_role:
           attributes:
             permissions_as_keys:

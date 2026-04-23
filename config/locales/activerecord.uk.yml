@@ -58,6 +58,10 @@ uk:
               unreachable: не існує
             role_id:
               elevated: не може бути вищою за поточну роль
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: має містити принаймні одне повне посилання
         user_role:
           attributes:
             permissions_as_keys:

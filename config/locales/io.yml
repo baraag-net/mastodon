@@ -1184,7 +1184,7 @@ io:
       preamble_html: Enirez per vua <strong>%{domain}</strong> detali. Se vua konto esas che altra servilo, vu ne povos enirar hike.
       title: Enirez a %{domain}
     sign_up:
-      manual_review: Registragi che %{domain} es revuata da nia personaro. Por helpar ni traktar vua aplikajo, vu mustas donar ligili a exempli de vua arto, altre vua aplikajo esos refuzata.
+      manual_review: Registragi che %{domain} es revuata da nia personaro. Por helpar ni traktar vua aplikajo, vu mustas donar ligili a exempli de vua arto, altre vua aplikajo esos refuzata. Inkluzez adminime un kompleta URL.
       preamble: Per konto en ca servilo di Mastodon, on povas sequar irga persono en ca fediverso, ne ye ube ona konto gastigesis.
       title: Ni komencigez vu en %{domain}.
     status:

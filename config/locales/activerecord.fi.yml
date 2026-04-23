@@ -62,6 +62,10 @@ fi:
               unreachable: ei näytä olevan olemassa
             role_id:
               elevated: ei voi olla korkeampi kuin nykyinen roolisi
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: sisällytä vähintään yksi täydellinen URL-osoite
         user_role:
           attributes:
             permissions_as_keys:

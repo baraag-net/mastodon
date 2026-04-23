@@ -62,6 +62,10 @@ ja:
               unreachable: は存在しないようです
             role_id:
               elevated: 現在と同じロールには変更できません
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: 完全な URL を少なくとも 1 つ含める必要があります
         user_role:
           attributes:
             permissions_as_keys:

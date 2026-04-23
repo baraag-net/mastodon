@@ -44,6 +44,10 @@ ie:
               unreachable: sembla ne exister
             role_id:
               elevated: ne posse esser plu alt quam tui actual rol
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: deve includer al minim un complet URL
         user_role:
           attributes:
             permissions_as_keys:

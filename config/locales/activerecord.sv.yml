@@ -62,6 +62,10 @@ sv:
               unreachable: verkar inte existera
             role_id:
               elevated: kan inte vara högre än din nuvarande roll
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: måste innehålla minst en fullständig URL
         user_role:
           attributes:
             permissions_as_keys:

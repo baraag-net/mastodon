@@ -62,6 +62,10 @@ sl:
               unreachable: kot kaže ne obstaja
             role_id:
               elevated: ne more biti višje od vaše trenutne vloge
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: mora vsebovati vsaj en popoln URL
         user_role:
           attributes:
             permissions_as_keys:

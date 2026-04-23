@@ -62,6 +62,10 @@ bg:
               unreachable: изглежда не съществува
             role_id:
               elevated: не може да е по-висока от текущата ви роля
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: трябва да включва поне един пълен URL адрес
         user_role:
           attributes:
             permissions_as_keys:

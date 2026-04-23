@@ -62,6 +62,10 @@ nn:
               unreachable: ser ikkje ut til å eksistere
             role_id:
               elevated: kan ikkje vere høgare enn di noverande rolle
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: må innehalda minst éin fullstendig URL
         user_role:
           attributes:
             permissions_as_keys:

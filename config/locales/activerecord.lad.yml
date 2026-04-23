@@ -49,6 +49,10 @@ lad:
               unreachable: no parese existir
             role_id:
               elevated: no puede ser mas alto ke tu rolo aktual
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: deve inkluir al manko un URL kompleto
         user_role:
           attributes:
             permissions_as_keys:

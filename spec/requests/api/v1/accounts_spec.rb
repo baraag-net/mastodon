@@ -74,13 +74,14 @@ RSpec.describe '/api/v1/accounts' do
 
   describe 'POST /api/v1/accounts' do
     subject do
-      post '/api/v1/accounts', headers: headers, params: { username: 'test', password: '12345678', email: 'hello@world.tld', agreement: agreement, date_of_birth: date_of_birth }
+      post '/api/v1/accounts', headers: headers, params: { username: 'test', password: '12345678', email: 'hello@world.tld', agreement: agreement, date_of_birth: date_of_birth, reason: reason }
     end
 
     let(:client_app) { Fabricate(:application) }
     let(:token) { Fabricate(:client_credentials_token, application: client_app, scopes: 'read write') }
     let(:agreement) { nil }
     let(:date_of_birth) { nil }
+    let(:reason) { nil }
 
     context 'when not using client credentials token' do
       let(:token) { Fabricate(:accessible_access_token, application: client_app, scopes: 'read write', resource_owner_id: user.id) }
@@ -181,6 +182,52 @@ RSpec.describe '/api/v1/accounts' do
         expect(response).to have_http_status(422)
         expect(response.content_type)
           .to start_with('application/json')
+      end
+    end
+
+    context 'when registrations require approval' do
+      let(:agreement) { 'true' }
+
+      before do
+        Setting.registrations_mode = 'approved'
+      end
+
+      context 'when the reason does not include a full URL' do
+        let(:reason) { 'I make art and would like to join.' }
+
+        it 'returns http unprocessable entity' do
+          expect { subject }
+            .to not_change(User, :count)
+            .and not_change(Account, :count)
+
+          expect(response).to have_http_status(422)
+          expect(response.content_type)
+            .to start_with('application/json')
+          expect(response.parsed_body)
+            .to include(
+              error: /Validation failed/,
+              details: include(reason: contain_exactly(include(error: 'ERR_MISSING_URL', description: I18n.t('activerecord.errors.models.user_invite_request.attributes.text.missing_url'))))
+            )
+        end
+      end
+
+      context 'when the reason includes a full URL' do
+        let(:reason) { 'Portfolio: https://example.com/@test' }
+
+        it 'creates a user', :aggregate_failures do
+          expect { subject }
+            .to change(User, :count).by(1)
+            .and change(Account, :count).by(1)
+
+          expect(response).to have_http_status(200)
+          expect(response.content_type)
+            .to start_with('application/json')
+
+          user = User.find_by(email: 'hello@world.tld')
+          expect(user).to_not be_nil
+          expect(user.approved?).to be(false)
+          expect(user.invite_request&.text).to eq(reason)
+        end
       end
     end
   end

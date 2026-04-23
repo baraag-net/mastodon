@@ -30,3 +30,7 @@ hy:
             email:
               blocked: արգելուած էլ. փոստի ծառայութիւն
               unreachable: կարծես գոյութիւն չունի
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: պէտք է պարունակի առնուազն մէկ ամբողջական URL

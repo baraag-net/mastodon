@@ -62,6 +62,10 @@ sq:
               unreachable: s’duket se ekziston
             role_id:
               elevated: s’mund të jetë më i lartë sesa roli juaj i tanishëm
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: duhet të përmbajë të paktën një URL të plotë
         user_role:
           attributes:
             permissions_as_keys:

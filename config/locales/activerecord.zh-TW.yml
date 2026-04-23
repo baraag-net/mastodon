@@ -62,6 +62,10 @@ zh-TW:
               unreachable: 該電子郵件地址似乎無法使用
             role_id:
               elevated: 不能高於您目前的角色
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: 必須包含至少一個完整的 URL
         user_role:
           attributes:
             permissions_as_keys:

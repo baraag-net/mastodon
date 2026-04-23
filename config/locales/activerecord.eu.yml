@@ -62,6 +62,10 @@ eu:
               unreachable: dirudienez ez da existitzen
             role_id:
               elevated: ezin du gaur egungo zure rola baino goragokoa izan
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: gutxienez URL oso bat izan behar du
         user_role:
           attributes:
             permissions_as_keys:

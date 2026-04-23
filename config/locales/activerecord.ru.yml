@@ -62,6 +62,10 @@ ru:
               unreachable: не существует
             role_id:
               elevated: не может быть выше вашей текущей роли
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: должна содержать хотя бы одну полную ссылку
         user_role:
           attributes:
             permissions_as_keys:

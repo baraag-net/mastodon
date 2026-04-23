@@ -62,6 +62,10 @@ cs:
               unreachable: pravděpodobně neexistuje
             role_id:
               elevated: nemůže být vyšší než vaše aktuální role
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: musí obsahovat alespoň jednu úplnou URL adresu
         user_role:
           attributes:
             permissions_as_keys:

@@ -62,6 +62,10 @@ be:
               unreachable: не існуе
             role_id:
               elevated: не можа быць вышэй за Вашу бягучую ролю
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: мусіць утрымліваць прынамсі адну поўную URL-спасылку
         user_role:
           attributes:
             permissions_as_keys:

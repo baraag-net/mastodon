@@ -62,6 +62,10 @@ gd:
               unreachable: "– tha coltas nach eil seo ann"
             role_id:
               elevated: "– chan fhaod seo a bhith nas àirde na an dreuchd a th’ agad an-dràsta"
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: feumaidh co-dhiù aon URL slàn a bhith ann
         user_role:
           attributes:
             permissions_as_keys:

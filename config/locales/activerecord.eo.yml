@@ -62,6 +62,10 @@ eo:
               unreachable: ŝajne ne ekzistas
             role_id:
               elevated: ne povas esti pli altranga ol via aktuala rolo
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: devas enhavi almenaŭ unu plenan URL
         user_role:
           attributes:
             permissions_as_keys:

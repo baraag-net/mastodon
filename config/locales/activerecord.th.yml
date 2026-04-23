@@ -54,6 +54,10 @@ th:
               unreachable: ดูเหมือนว่าจะไม่มีอยู่
             role_id:
               elevated: ไม่สามารถสูงกว่าบทบาทปัจจุบันของคุณ
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: ต้องมี URL แบบเต็มอย่างน้อยหนึ่งรายการ
         user_role:
           attributes:
             permissions_as_keys:

@@ -256,7 +256,7 @@ RSpec.describe Auth::RegistrationsController do
       subject do
         Setting.registrations_mode = 'approved'
         request.headers['Accept-Language'] = accept_language
-        post :create, params: { user: { account_attributes: { username: 'test' }, email: 'test@example.com', password: '12345678', password_confirmation: '12345678', agreement: 'true' } }
+        post :create, params: { user: { account_attributes: { username: 'test' }, email: 'test@example.com', password: '12345678', password_confirmation: '12345678', agreement: 'true', invite_request_attributes: { text: 'Portfolio: https://example.com/@test' } } }
       end
 
       it 'redirects to setup and creates user' do
@@ -274,12 +274,28 @@ RSpec.describe Auth::RegistrationsController do
       end
     end
 
+    context 'with Approval-based registrations without a URL in the reason' do
+      subject do
+        Setting.registrations_mode = 'approved'
+        request.headers['Accept-Language'] = accept_language
+        post :create, params: { user: { account_attributes: { username: 'test' }, email: 'test@example.com', password: '12345678', password_confirmation: '12345678', agreement: 'true', invite_request_attributes: { text: '' } } }
+      end
+
+      it 're-renders the form and does not create user' do
+        expect { subject }
+          .to_not change(User, :count)
+
+        expect(response).to have_http_status(:success)
+        expect(response.body).to include(I18n.t('activerecord.errors.models.user_invite_request.attributes.text.missing_url'))
+      end
+    end
+
     context 'with Approval-based registrations with expired invite' do
       subject do
         Setting.registrations_mode = 'approved'
         request.headers['Accept-Language'] = accept_language
         invite = Fabricate(:invite, max_uses: nil, expires_at: 1.hour.ago)
-        post :create, params: { user: { account_attributes: { username: 'test' }, email: 'test@example.com', password: '12345678', password_confirmation: '12345678', invite_code: invite.code, agreement: 'true' } }
+        post :create, params: { user: { account_attributes: { username: 'test' }, email: 'test@example.com', password: '12345678', password_confirmation: '12345678', invite_code: invite.code, agreement: 'true', invite_request_attributes: { text: 'Portfolio: https://example.com/@test' } } }
       end
 
       it 'redirects to setup and creates user' do

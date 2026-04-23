@@ -62,6 +62,10 @@ gl:
               unreachable: semella que non existe
             role_id:
               elevated: non pode superar o teu rol actual
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: debe incluír polo menos unha URL completa
         user_role:
           attributes:
             permissions_as_keys:

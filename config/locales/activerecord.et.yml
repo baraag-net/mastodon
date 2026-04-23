@@ -62,6 +62,10 @@ et:
               unreachable: ei paista eksisteerivat
             role_id:
               elevated: ei saa olla kõrgem kui enda roll
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: peab sisaldama vähemalt ühte täielikku URL-i
         user_role:
           attributes:
             permissions_as_keys:

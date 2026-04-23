@@ -62,6 +62,10 @@ fo:
               unreachable: tykist ikki at vera til
             role_id:
               elevated: kann ikki vera hægri enn verandi støða
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: skal hava í minsta lagi eina fulla URL-adressu
         user_role:
           attributes:
             permissions_as_keys:

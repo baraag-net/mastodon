@@ -47,6 +47,10 @@
               unreachable: ser ikke ut til å finnes
             role_id:
               elevated: kan ikke være høyere enn din nåværende rolle
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: må inneholde minst én fullstendig URL
         user_role:
           attributes:
             permissions_as_keys:

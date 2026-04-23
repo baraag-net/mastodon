@@ -62,6 +62,10 @@ ga:
               unreachable: ní cosúil go bhfuil sé ann
             role_id:
               elevated: ní féidir leat a bheith níos airde ná do ról reatha
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: caithfidh URL iomlán amháin ar a laghad a bheith san áireamh
         user_role:
           attributes:
             permissions_as_keys:

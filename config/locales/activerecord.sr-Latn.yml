@@ -44,6 +44,10 @@ sr-Latn:
               unreachable: izgleda da ne postoji
             role_id:
               elevated: ne može biti više sa vašom trenutnom ulogom
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: mora da sadrži najmanje jedan potpuni URL
         user_role:
           attributes:
             permissions_as_keys:

@@ -62,6 +62,10 @@ hu:
               unreachable: úgy tűnik, hogy nem létezik
             role_id:
               elevated: nem lehet magasabb, mint a jelenlegi szereped
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: legalább egy teljes URL-t kell tartalmaznia
         user_role:
           attributes:
             permissions_as_keys:

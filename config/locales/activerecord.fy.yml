@@ -62,6 +62,10 @@ fy:
               unreachable: liket net te bestean
             role_id:
               elevated: kin net heger wêze as jo aktuele rol
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: moat op syn minst ien folsleine URL befetsje
         user_role:
           attributes:
             permissions_as_keys:

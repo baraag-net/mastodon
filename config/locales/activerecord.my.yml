@@ -44,6 +44,10 @@ my:
               unreachable: သည် တည်ရှိပုံ မပေါ်ပါ
             role_id:
               elevated: သင့်လက်ရှိအခန်းကဏ္ဍထက်ပို၍ မမြှင့်တင်နိုင်ပါ
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: အနည်းဆုံး URL အပြည့်အစုံ တစ်ခု ပါရှိရမည်
         user_role:
           attributes:
             permissions_as_keys:

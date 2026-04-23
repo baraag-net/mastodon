@@ -62,6 +62,10 @@ is:
               unreachable: virðist ekki vera til
             role_id:
               elevated: getur ekki verið veigameiri en núverandi hlutverk þitt
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: verður að innihalda a.m.k. eina fullgilda vefslóð
         user_role:
           attributes:
             permissions_as_keys:

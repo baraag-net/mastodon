@@ -1029,7 +1029,7 @@ ms:
       preamble_html: Log masuk dengan bukti kelayakan <strong>%{domain}</strong> anda. Jika akaun anda dihoskan pada server lain, anda tidak akan dapat log masuk di sini.
       title: Log masuk ke %{domain}
     sign_up:
-      manual_review: Pendaftaran pada %{domain} melalui semakan manual oleh penyederhana kami. Untuk membantu kami memproses pendaftaran anda, anda mesti menyediakan pautan kepada contoh seni anda atau permohonan anda akan ditolak.
+      manual_review: Pendaftaran pada %{domain} melalui semakan manual oleh penyederhana kami. Untuk membantu kami memproses pendaftaran anda, anda mesti menyediakan pautan kepada contoh seni anda atau permohonan anda akan ditolak. Sertakan sekurang-kurangnya satu URL lengkap.
       title: Mari sediakan anda pada %{domain}.
     status:
       account_status: Status akaun

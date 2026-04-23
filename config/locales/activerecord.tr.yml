@@ -62,6 +62,10 @@ tr:
               unreachable: mevcut gözükmüyor
             role_id:
               elevated: mevcut rolünüzden yüksek olamaz
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: en az bir tam URL içermelidir
         user_role:
           attributes:
             permissions_as_keys:

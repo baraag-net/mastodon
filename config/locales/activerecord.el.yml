@@ -62,6 +62,10 @@ el:
               unreachable: δεν φαίνεται να υπάρχει
             role_id:
               elevated: δεν μπορεί να είναι υψηλότερο από τον τρέχοντα ρόλο σου
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: πρέπει να περιλαμβάνει τουλάχιστον μία πλήρη διεύθυνση URL
         user_role:
           attributes:
             permissions_as_keys:

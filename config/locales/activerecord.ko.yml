@@ -62,6 +62,10 @@ ko:
               unreachable: 존재하지 않는 것 같습니다
             role_id:
               elevated: 당신의 현재 역할보다 높을 수 없습니다
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: 최소한 하나의 전체 URL을 포함해야 합니다
         user_role:
           attributes:
             permissions_as_keys:

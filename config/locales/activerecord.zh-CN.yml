@@ -62,6 +62,10 @@ zh-CN:
               unreachable: 似乎不存在
             role_id:
               elevated: 不能高于你目前所处角色拥有的权限
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: 必须包含至少一个完整的 URL
         user_role:
           attributes:
             permissions_as_keys:

@@ -62,6 +62,10 @@ ca:
               unreachable: sembla que no existeix
             role_id:
               elevated: no pot ser superior al teu rol actual
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: ha d'incloure almenys una URL completa
         user_role:
           attributes:
             permissions_as_keys:

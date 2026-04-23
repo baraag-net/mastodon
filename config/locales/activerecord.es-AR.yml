@@ -62,6 +62,10 @@ es-AR:
               unreachable: no parece existir
             role_id:
               elevated: no puede ser mayor que tu rol actual
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: tiene que incluir al menos una URL completa
         user_role:
           attributes:
             permissions_as_keys:

@@ -1263,7 +1263,7 @@ eo:
       preamble_html: Ensalutu per via detaloj de <strong>%{domain}</strong>. Se via konto gastigantigas sur malsama servilo, vi ne povas ensaluti ĉi tie.
       title: Saluti en %{domain}
     sign_up:
-      manual_review: Enskriboj en %{domain} havas manan superrigardon, farita de niaj moderistoj. Por helpi nin por procezi vian enskribon, vi devas doni ligilojn al ekzemploj de via arto, alie via kandidatiĝo estos malakceptita.
+      manual_review: Enskriboj en %{domain} havas manan superrigardon, farita de niaj moderistoj. Por helpi nin por procezi vian enskribon, vi devas doni ligilojn al ekzemploj de via arto, alie via kandidatiĝo estos malakceptita. Inkluzivu almenaŭ unu plenan URL.
       preamble: Per konto ĉe ĉi tiu Mastodon-servilo, vi povos sekvi ajnan alian personon ĉe la fediverso, sendepende de kie ilia konto estas gastigita.
       title: Ni pretigu vin ĉe %{domain}.
     status:

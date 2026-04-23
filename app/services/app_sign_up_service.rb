@@ -21,9 +21,18 @@ class AppSignUpService < BaseService
   private
 
   def create_user!
-    @user = User.create!(
-      user_params.merge(created_by_application: @app, sign_up_ip: @remote_ip, password_confirmation: user_params[:password], account_attributes: account_params, invite_request_attributes: invite_request_params)
+    @user = User.new(
+      user_params.merge(
+        created_by_application: @app,
+        sign_up_ip: @remote_ip,
+        password_confirmation: user_params[:password],
+        account_attributes: account_params,
+        invite_request_attributes: invite_request_params
+      )
     )
+
+    prepare_invite_request_for_url_validation if invite_request_url_required?(invite)
+    @user.save!
   end
 
   def create_access_token!
@@ -50,5 +59,11 @@ class AppSignUpService < BaseService
 
   def invite_request_params
     { text: @params[:reason] }
+  end
+
+  def prepare_invite_request_for_url_validation
+    invite_request = @user.invite_request || @user.build_invite_request
+    invite_request.text = @params[:reason]
+    invite_request.require_url = true
   end
 end

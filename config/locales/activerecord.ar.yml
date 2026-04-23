@@ -62,6 +62,10 @@ ar:
               unreachable: يبدو أنه لا وجود له
             role_id:
               elevated: لا يمكن أن يكون أعلى من دَورِك الحالي
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: يجب تضمين عنوان URL كامل واحد على الأقل
         user_role:
           attributes:
             permissions_as_keys:

@@ -62,6 +62,10 @@ ms:
               unreachable: nampaknya tidak wujud
             role_id:
               elevated: tidak boleh lebih tinggi daripada peranan semasa anda
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: mesti menyertakan sekurang-kurangnya satu URL lengkap
         user_role:
           attributes:
             permissions_as_keys:

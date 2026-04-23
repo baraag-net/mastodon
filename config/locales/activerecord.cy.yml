@@ -62,6 +62,10 @@ cy:
               unreachable: nid yw i weld yn bodoli
             role_id:
               elevated: nid yw'n gallu bod yn uwch na'ch rôl presennol
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: rhaid cynnwys o leiaf un URL llawn
         user_role:
           attributes:
             permissions_as_keys:

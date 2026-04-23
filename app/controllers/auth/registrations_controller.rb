@@ -56,6 +56,7 @@ class Auth::RegistrationsController < Devise::RegistrationsController
     resource.invite_code            = @invite&.code if resource.invite_code.blank?
     resource.registration_form_time = session[:registration_form_time]
     resource.sign_up_ip             = request.remote_ip
+    prepare_invite_request_for_url_validation(hash) if invite_request_url_required?(@invite)
 
     resource.build_account if resource.account.nil?
   end
@@ -107,6 +108,13 @@ class Auth::RegistrationsController < Devise::RegistrationsController
       invite = Invite.find_by(code: invite_code) if invite_code.present?
       invite if invite&.valid_for_use?
     end
+  end
+
+  def prepare_invite_request_for_url_validation(sign_up_params)
+    invite_request_text = sign_up_params&.dig(:invite_request_attributes, :text) || sign_up_params&.dig('invite_request_attributes', 'text')
+    invite_request = resource.invite_request || resource.build_invite_request
+    invite_request.text = invite_request_text
+    invite_request.require_url = true
   end
 
   def determine_layout

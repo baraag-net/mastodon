@@ -62,6 +62,10 @@ pt-BR:
               unreachable: parece não existir
             role_id:
               elevated: não pode ser maior que a sua função atual
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: deve incluir pelo menos uma URL completa
         user_role:
           attributes:
             permissions_as_keys:

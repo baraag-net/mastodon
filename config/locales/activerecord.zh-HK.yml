@@ -44,6 +44,10 @@ zh-HK:
               unreachable: 似乎不存在
             role_id:
               elevated: 不可高於你目前的身份
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: 必須包含至少一個完整的 URL
         user_role:
           attributes:
             permissions_as_keys:

@@ -1288,7 +1288,7 @@ gl:
       preamble_html: Accede coas credenciais en <strong>%{domain}</strong>. Se a túa conta está noutro servidor non poderás acceder desde aquí.
       title: Accede a %{domain}
     sign_up:
-      manual_review: As novas contas en %{domain} son comprobadas manualmente pola moderación. Para axudarnos a xestionar o teu rexistro, debes fornecer ligazóns a exemplos da túa arte ou a túa solicitude será rexeitada.
+      manual_review: As novas contas en %{domain} son comprobadas manualmente pola moderación. Para axudarnos a xestionar o teu rexistro, debes fornecer ligazóns a exemplos da túa arte ou a túa solicitude será rexeitada. Inclúe polo menos unha URL completa.
       preamble: Cunha conta neste servidor Mastodon poderás seguir a calquera outra persoa no fediverso, independentemente de onde estivese hospedada esa conta.
       title: Imos crear a túa conta en %{domain}.
     status:

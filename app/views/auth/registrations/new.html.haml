@@ -70,7 +70,7 @@
                                       hint: false,
                                       label: false,
                                       input_html: { maxlength: UserInviteRequest::TEXT_SIZE_LIMIT },
-                                      required: Setting.require_invite_text,
+                                      required: true,
                                       wrapper: :with_block_label
 
   = hidden_field_tag :accept, params[:accept]

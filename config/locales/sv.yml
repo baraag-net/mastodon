@@ -1288,7 +1288,7 @@ sv:
       preamble_html: Logga in med dina användaruppgifter på <strong>%{domain}</strong>. Om ditt konto finns på en annan server kommer du inte att kunna logga in här.
       title: Logga in på %{domain}
     sign_up:
-      manual_review: Registreringar på %{domain} går igenom manuell granskning av våra moderatorer. För att hjälpa oss att hantera din registrering måste du tillhandahålla länkar till exempel på din konst, annars kommer din ansökan att avslås.
+      manual_review: Registreringar på %{domain} går igenom manuell granskning av våra moderatorer. För att hjälpa oss att hantera din registrering måste du tillhandahålla länkar till exempel på din konst, annars kommer din ansökan att avslås. Inkludera minst en fullständig URL.
       preamble: Med ett konto på denna Mastodon-server kan du följa alla andra personer i fediversum, oavsett vilken server deras konto tillhör.
       title: Låt oss få igång dig på %{domain}.
     status:

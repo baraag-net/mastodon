@@ -62,6 +62,10 @@ fa:
               unreachable: به نظر نمی‌رسد وجود داشته باشد
             role_id:
               elevated: نمی‌تواند بالاتر از نقش کنونیتان باشد
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: باید حداقل یک نشانی اینترنتی کامل داشته باشد
         user_role:
           attributes:
             permissions_as_keys:

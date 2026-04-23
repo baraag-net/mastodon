@@ -62,6 +62,10 @@ nl:
               unreachable: schijnt niet te bestaan
             role_id:
               elevated: kan niet hoger zijn dan jouw huidige rol
+        user_invite_request:
+          attributes:
+            text:
+              missing_url: moet ten minste één volledige URL bevatten
         user_role:
           attributes:
             permissions_as_keys:
