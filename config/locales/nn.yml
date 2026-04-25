@@ -1288,6 +1288,7 @@ nn:
       preamble_html: Logg inn med brukaropplysningar for <strong>%{domain}</strong>. Dersom kontoen din er registrert på ein annan tenar vil du ikkje kunne logga inn her.
       title: Logg inn på %{domain}
     sign_up:
+      email_art_fallback_html: Dersom du ikkje kan oppgi døme på lenkjer, kan du sende kunsten din som vedlegg per e-post til %{email_link}
       manual_review: Når du lagar ein konto på %{domain}, vil moderatorane våre gå gjennom påmeldinga di manuelt. For å hjelpa oss med påmeldinga di må du oppgi lenker til døme på kunsten din, elles vert søknaden din avvist. Ta med minst éin fullstendig URL.
       preamble: Med ein konto på denne Mastodon-tenaren kan du fylgja andre folk på allheimen, uansett kvar dei har brukarkontoen sin.
       title: La oss få deg satt i gang på %{domain}.

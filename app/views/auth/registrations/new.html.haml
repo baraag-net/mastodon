@@ -72,6 +72,8 @@
                                       input_html: { maxlength: UserInviteRequest::TEXT_SIZE_LIMIT },
                                       required: Setting.require_invite_text || invite_request_url_required?(@invite),
                                       wrapper: :with_block_label
+      - if Setting.require_invite_text && invite_request_url_required?(@invite) && Rails.configuration.x.registration_art_submission_email.present?
+        %p.hint= t('auth.sign_up.email_art_fallback_html', email_link: mail_to(Rails.configuration.x.registration_art_submission_email))
 
   = hidden_field_tag :accept, params[:accept]
   = f.input :invite_code, as: :hidden

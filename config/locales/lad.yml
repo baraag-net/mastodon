@@ -1215,6 +1215,7 @@ lad:
       preamble_html: Konektate kon tus kredensiales de <strong>%{domain}</strong>. Si tu kuento esta balabayado en otruno servidor, no puedras konektarte aki.
       title: Konektate kon %{domain}
     sign_up:
+      email_art_fallback_html: Si no podes dar enlaces de egzempios, puedes embiar tu arte komo adjuntos por korreo elektroniko a %{email_link}
       manual_review: Las enrejistrasyones en %{domain} pasan por la revizyon manuala de muestros moderadores. Para ayudarmos a prosesar tu enrejistrasyon, deves dar linkes a ejemplos de tu arte, sino tu aplikasyon sera refuzada. Inkluye al manko un URL kompleto.
       preamble: Kon un kuento en este sirvidor de Mastodon, podras segir a kualkier otra persona en el fediverso, endependientemente del sirvidor en el ke se tope.
       title: Kriya kuento de Mastodon en %{domain}.

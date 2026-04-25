@@ -1347,6 +1347,7 @@ ga:
       preamble_html: Logáil isteach le do dhintiúir <strong>%{domain}</strong>. Má tá do chuntas á óstáil ar fhreastalaí eile, ní bheidh tú in ann logáil isteach anseo.
       title: Logáil isteach go %{domain}
     sign_up:
+      email_art_fallback_html: Mura féidir leat samplaí naisc a sholáthar, féadfaidh tú do chuid ealaíne a sheoladh trí ríomhphost mar iatáin chuig %{email_link}
       manual_review: Téann clárúcháin ar %{domain} trí athbhreithniú láimhe ag ár modhnóirí. Chun cabhrú linn do chlárúchán a phróiseáil, caithfidh tú naisc le samplaí de d'ealaín a sholáthar, nó diúltófar d'iarratas. Cuir URL iomlán amháin ar a laghad san áireamh.
       preamble: Agus cuntas agat ar an bhfreastalaí Mastodon seo, beidh tú in ann aon duine eile ar an bhfealsúnacht a leanúint, is cuma cá bhfuil a gcuntas á óstáil.
       title: Déanaimis tú a shocrú ar %{domain}.

@@ -1,10 +1,11 @@
 ## Fork changes
 
-- **Email notifications are off by default.** New users start with `notification_emails.follow`, `follow_request`, `reblog`, `favourite`, `mention`, and `quote` set to `false`. (`42e9553`)
-- **`DISABLE_EMAIL_NOTIFICATIONS_TOGGLE` env var.** When set to `true`, the user-facing email notification toggles (and `always_send_emails`) are hidden from `Settings → Notifications` and stripped server-side so they cannot be set via direct POST. Admin-only toggles (reports, appeals, pending accounts, trends, software updates) are unaffected. (`42e9553`)
-- **Manual review sign-up edit.** The `sign_up.manual_review` string in all locale files now instructs applicants that they must provide links to examples of their art or their application will be rejected. (`7f6a781`)
-- **Manual review URL requirement is enforced server-side by default.** On approval-based sign-ups without a valid invite, applicants must include at least one full URL in their reason. This is enforced for both the web sign-up flow and `/api/v1/accounts`. (`2026af3`)
-- **`DISABLE_REGISTRATION_REASON_URL_REQUIREMENT` env var.** When set to `true`, approval-based sign-ups fall back to upstream `require_invite_text` behavior instead of requiring a full URL in the application reason. (`160bca9`)
+- **Email notifications off by default.** New users start with follow, follow_request, reblog, favourite, mention, and quote notification emails disabled. (`42e9553`)
+- **`DISABLE_EMAIL_NOTIFICATIONS_TOGGLE` env var.** When `true`, hides user-facing email notification toggles and strips them server-side. Admin-only toggles unaffected. (`42e9553`)
+- **Manual review sign-up edit.** `sign_up.manual_review` updated across all locales to require art examples or applications will be rejected. (`7f6a781`)
+- **Manual review URL requirement enforced server-side.** Approval-based sign-ups without a valid invite must include at least one full URL in the reason, on both the web flow and `/api/v1/accounts`. (`2026af3`)
+- **`DISABLE_REGISTRATION_REASON_URL_REQUIREMENT` env var.** When `true`, falls back to upstream `require_invite_text` behavior instead of requiring a URL. (`160bca9`)
+- **`REGISTRATION_ART_SUBMISSION_EMAIL` env var.** When set, the sign-up reason field shows a hint offering this address as an email fallback for applicants who cannot provide link examples.
 
 ---
 

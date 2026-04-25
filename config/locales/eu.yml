@@ -1248,6 +1248,7 @@ eu:
       preamble_html: Zure <strong>%{domain}-(e)ko</strong> egiaztagiriekin saioa hasi. Zure kontua beste zerbitzari batean badago, ezin izango duzu hemen saioa hasi.
       title: "%{domain}-(e)an saioa hasi"
     sign_up:
+      email_art_fallback_html: "Adibideen estekak eman ezin badituzu, zure artea eranskin gisa bidal dezakezu mezu elektroniko bidez helbide honetara: %{email_link}"
       manual_review: "%{domain}-(e)n eginiko izen-emateak gure moderatzaileek eskuz aztertzen dituzte. Zure izen-ematea prozesatzen lagun gaitzazun, zure artearen adibideetarako estekak eman behar dituzu, bestela zure eskaera baztertuko da. Sartu gutxienez URL oso bat."
       preamble: Mastodon zerbitzari honetako kontu batekin, aukera izango duzu fedibertsoko edozein pertsona jarraitzeko, ez dio axola kontua non ostatatua dagoen.
       title: "%{domain} zerbitzariko kontua prestatuko dizugu."

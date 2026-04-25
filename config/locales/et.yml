@@ -1288,6 +1288,7 @@ et:
       preamble_html: Logi sisse oma kasutajakontoga serverisse <strong>%{domain}</strong>. Kui konto asub teises serveris, siis sa ei saa siin sisse logida.
       title: Logi sisse serverisse %{domain}
     sign_up:
+      email_art_fallback_html: Kui te ei saa anda näidislinke, võite saata oma kunsti manustena e-postiga aadressile %{email_link}
       manual_review: Liitumised kohas %{domain} vaadatakse meie moderaatorite poolt käsitsi läbi. Aitamaks meil sinu taotlust läbi vaadata, pead esitama lingid oma kunsti näidetele, vastasel juhul lükatakse sinu taotlus tagasi. Lisa vähemalt üks täielik URL.
       preamble: Selle Mastodoni serveri kontoga saad jälgida mistahes teist isikut fediversumis, sõltumata sellest, kus ta konto on majutatud.
       title: Loo konto serverisse  %{domain}.

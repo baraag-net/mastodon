@@ -1269,6 +1269,7 @@ vi:
       preamble_html: Đăng nhập bằng tài khoản <strong>%{domain}</strong>. Nếu đăng ký trên một máy chủ khác, bạn sẽ không thể đăng nhập tại đây.
       title: Đăng nhập %{domain}
     sign_up:
+      email_art_fallback_html: Nếu bạn không thể cung cấp ví dụ về liên kết, bạn có thể gửi tác phẩm của mình dưới dạng tệp đính kèm qua email đến %{email_link}
       manual_review: "%{domain} sẽ duyệt đăng ký thủ công. Để giúp chúng tôi duyệt nhanh, bạn phải cung cấp liên kết đến các ví dụ về tác phẩm nghệ thuật của bạn, nếu không đơn đăng ký của bạn sẽ bị từ chối. Bao gồm ít nhất một URL đầy đủ."
       preamble: Với tài khoản trên máy chủ Mastodon này, bạn sẽ có thể theo dõi bất kỳ người nào trên các máy chủ khác, bất kể tài khoản của họ ở đâu.
       title: Đang đăng ký trên %{domain}.

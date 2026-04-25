@@ -1288,6 +1288,7 @@ pt-PT:
       preamble_html: Iniciar sessão com as suas credenciais de <strong>%{domain}</strong>. Se a sua conta estiver hospedada noutro servidor, não poderá iniciar sessão aqui.
       title: Iniciar sessão em %{domain}
     sign_up:
+      email_art_fallback_html: Se não puder fornecer ligações de exemplo, pode enviar a sua arte como anexos por e-mail para %{email_link}
       manual_review: As inscrições em %{domain} passam por uma revisão manual pelos nossos moderadores. Para nos ajudar a processar o teu pedido de inscrição, tens de fornecer ligações para exemplos da tua arte, caso contrário a tua candidatura será rejeitada. Inclui pelo menos um URL completo.
       preamble: Com uma conta neste servidor Mastodon, poderás seguir qualquer outra pessoa no fediverso, independentemente do local onde a tua conta está alojada.
       title: Vamos lá inscrever-te em %{domain}.

@@ -1288,6 +1288,7 @@ es:
       preamble_html: Inicia sesión con tus credenciales de <strong>%{domain}</strong>. Si tu cuenta está alojada en un servidor diferente, no podrás iniciar sesión aquí.
       title: Iniciar sesión en %{domain}
     sign_up:
+      email_art_fallback_html: Si no puedes proporcionar enlaces de ejemplo, puedes enviar tu arte como archivos adjuntos por correo electrónico a %{email_link}
       manual_review: Los registros en %{domain} pasan por la revisión manual de nuestros moderadores. Para ayudarnos a procesar tu registro, debes proporcionar enlaces a ejemplos de tu arte o tu solicitud será rechazada. Incluye al menos una URL completa.
       preamble: Con una cuenta en este servidor de Mastodon, podrás seguir a cualquier otra persona en el fediverso, independientemente de dónde esté alojada su cuenta.
       title: Crear cuenta de Mastodon en %{domain}.

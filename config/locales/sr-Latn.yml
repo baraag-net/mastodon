@@ -1083,6 +1083,7 @@ sr-Latn:
       preamble_html: Prijavite se sa svojim podacima za <strong>%{domain}</strong>. Ako se Vaš nalog nalazi na drugom serveru, nećete moći da se prijavite ovde.
       title: Prijavite se na %{domain}
     sign_up:
+      email_art_fallback_html: Ako ne možete da pružite primere linkova, možete poslati svoje umetničke radove kao priloge putem e-pošte na %{email_link}
       manual_review: Naši moderatori ručno pregledaju registracije na %{domain}. Da biste nam pomogli da obradimo vašu registraciju, morate da priložite veze ka primerima svoje umetnosti, u suprotnom će vaša prijava biti odbijena. Uključite najmanje jedan potpuni URL.
       title: Hajde da Vam namestimo nalog na %{domain}.
     status:

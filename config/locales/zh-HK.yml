@@ -1081,6 +1081,7 @@ zh-HK:
       preamble_html: 請使用 <strong>%{domain}</strong> 的資料登入。如果您的帳戶託管在其他的伺服器，您將無法在此登入。
       title: 登入 %{domain}
     sign_up:
+      email_art_fallback_html: 如果你無法提供連結範例，你可以將你嘅藝術作品以附件形式透過電郵發送到 %{email_link}
       manual_review: "%{domain} 的註冊均需要我們的管理員手動審核。為了幫助我們處理你的註冊，你必須提供你的藝術作品範例連結，否則你的申請將會被拒絕。請至少包含一個完整的 URL。"
       title: 讓我為你在 %{domain} 上設定好。
     status:

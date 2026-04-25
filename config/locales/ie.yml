@@ -1062,6 +1062,7 @@ ie:
       preamble_html: Aperter session med tui <strong>%{domain}</strong> detallies. Si tui conto logia che un diferent servitor, tu ne va posser intrar ci.
       title: Aperter session che %{domain}
     sign_up:
+      email_art_fallback_html: Si vu ne posse provider exemples de ligamines, vu posse inviar vor arte quam annexes per e-mail a %{email_link}
       manual_review: Adhesiones a %{domain} es tractat manualmen de nor moderatores. Por auxiliar nos tractar tui aplication, tu deve provider ligamentes a exemples de tui arte, altrimen tui aplication va esser refusat. Includer al minim un complet URL.
       title: Crear un conto che %{domain}.
     status:

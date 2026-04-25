@@ -1288,6 +1288,7 @@ es-AR:
       preamble_html: Iniciá sesión con tus credenciales de <strong>%{domain}</strong>. Si tu cuenta está alojada en un servidor diferente, no vas a poder iniciar sesión acá.
       title: Iniciar sesión en %{domain}
     sign_up:
+      email_art_fallback_html: Si no podés proporcionar enlaces de ejemplo, podés enviar tu arte como archivos adjuntos por correo electrónico a %{email_link}
       manual_review: Los registros en %{domain} pasan por la revisión manual de nuestros moderadores. Para ayudarnos a procesar tu registro, tenés que proporcionar enlaces a ejemplos de tu arte o tu solicitud será rechazada. Incluí al menos una URL completa.
       preamble: Con una cuenta en este servidor de Mastodon, podrás seguir a cualquier otra cuenta en el Fediverso, independientemente de dónde esté alojada su cuenta.
       title: Dejá que te preparemos en %{domain}.
