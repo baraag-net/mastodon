@@ -1,0 +1,27 @@
+@use '../mastodon/functions' as *;
+
+// Yellow palette replacing the default blurple accents
+// ($blurple-500/600/400/300 and $ui-highlight-color)
+$yellow-600: #ca8a04;
+$yellow-500: #facc15;
+$yellow-400: #fde047;
+$yellow-300: #fde68a;
+$yellow-ink: #1a1300;
+
+@use '../mastodon/variables' with (
+  $ui-highlight-color: $yellow-500,
+  $highlight-text-color: $yellow-400,
+  $ui-button-color: $yellow-ink,
+  $ui-button-background-color: $yellow-500,
+  $ui-button-focus-background-color: $yellow-600,
+  $ui-button-focus-outline-color: $yellow-400,
+  $ui-button-secondary-color: $yellow-400,
+  $ui-button-secondary-border-color: $yellow-400,
+  $ui-button-secondary-focus-border-color: $yellow-300,
+  $ui-button-secondary-focus-color: $yellow-300,
+  $ui-button-tertiary-color: $yellow-300,
+  $ui-button-tertiary-border-color: $yellow-300,
+  $ui-button-tertiary-focus-background-color: $yellow-600,
+  $ui-button-tertiary-focus-color: $yellow-ink,
+  $ui-button-icon-hover-background-color: rgba(250, 204, 21, 0.4)
+);

@@ -2008,6 +2008,7 @@ en:
     contrast: Mastodon (High contrast)
     default: Mastodon (Dark)
     mastodon-light: Mastodon (Light)
+    mastodon-yellow: Mastodon (Yellow)
     system: Automatic (use system theme)
   time:
     formats:
