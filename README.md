@@ -6,7 +6,8 @@
 - **Manual review URL requirement enforced server-side.** Approval-based sign-ups without a valid invite must include at least one full URL in the reason, on both the web flow and `/api/v1/accounts`. (`2026af3`)
 - **`DISABLE_REGISTRATION_REASON_URL_REQUIREMENT` env var.** When `true`, falls back to upstream `require_invite_text` behavior instead of requiring a URL. (`160bca9`)
 - **`REGISTRATION_ART_SUBMISSION_EMAIL` env var.** When set, the sign-up reason field shows a hint offering this address as an email fallback for applicants who cannot provide link examples. (`c5dc611`)
-- **Mastodon (Yellow) theme.** Dark theme variant that retints the default blurple accents to yellow.
+- **Mastodon (Yellow) theme.** Dark theme variant that retints the default blurple accents to yellow. (`ace3b16`)
+- **New logo.** Refreshed `logo.svg`, `logo-symbol-icon.svg`, and `logo-symbol-wordmark.svg` artwork.
 
 ---
 
