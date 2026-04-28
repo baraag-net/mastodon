@@ -156,6 +156,22 @@ RSpec.describe Auth::RegistrationsController do
       end
     end
 
+    context 'with approved registrations and an art submission email' do
+      before do
+        Setting.registrations_mode = 'approved'
+        Setting.require_invite_text = false
+        allow(Rails.configuration.x).to receive_messages(disable_registration_reason_url_requirement: true, registration_art_submission_email: 'art@example.com')
+      end
+
+      it 'shows the email fallback when the URL requirement is disabled' do
+        get :new
+
+        expect(response.body)
+          .to include('mailto:art@example.com')
+          .and include('If you are unable to provide link examples')
+      end
+    end
+
     it_behaves_like 'registration mode based responses', :new
   end
 
