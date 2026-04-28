@@ -7,7 +7,8 @@
 - **`DISABLE_REGISTRATION_REASON_URL_REQUIREMENT` env var.** When `true`, falls back to upstream `require_invite_text` behavior instead of requiring a URL. (`160bca9`)
 - **`REGISTRATION_ART_SUBMISSION_EMAIL` env var.** When set, the sign-up reason field shows a hint offering this address as an email fallback for applicants who cannot provide link examples. (`c5dc611`)
 - **Mastodon (Yellow) theme.** Dark theme variant that retints the default blurple accents to yellow. (`ace3b16`)
-- **New logo.** Refreshed `logo.svg`, `logo-symbol-icon.svg`, and `logo-symbol-wordmark.svg` artwork.
+- **New logo.** Refreshed `logo.svg`, `logo-symbol-icon.svg`, and `logo-symbol-wordmark.svg` artwork. (`be95bec`)
+- **Adult content rating meta tags.** Adds `rating: adult` and the RTA label to the application layout `<head>`.
 
 ---
 
