@@ -909,6 +909,7 @@
   "status.load_more": "Többet",
   "status.media.open": "Kattints a megnyitáshoz",
   "status.media.show": "Kattints a megtekintéshez",
+  "status.media.show_logged_out": "A kattintással megerősíti, hogy elmúlt 18 éves",
   "status.media_hidden": "Média elrejtve",
   "status.mention": "@{name} megemlítése",
   "status.more": "Többet",

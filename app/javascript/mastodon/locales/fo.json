@@ -909,6 +909,7 @@
   "status.load_more": "Tak meira niður",
   "status.media.open": "Klikka fyri at lata upp",
   "status.media.show": "Klikka fyri at vísa",
+  "status.media.show_logged_out": "Við at trýsta, váttar tú, at tú ert 18 ár ella eldri",
   "status.media_hidden": "Miðil fjaldur",
   "status.mention": "Nevn @{name}",
   "status.more": "Meira",

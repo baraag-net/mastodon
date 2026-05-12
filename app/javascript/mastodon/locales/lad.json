@@ -776,6 +776,7 @@
   "status.load_more": "Eskarga mas",
   "status.media.open": "Klika para avrir",
   "status.media.show": "Klika para amostrar",
+  "status.media.show_logged_out": "Aklikando, konfirmas ke tienes 18 anyos o mas",
   "status.media_hidden": "Multimedia eskondidos",
   "status.mention": "Enmenta a @{name}",
   "status.more": "Mas",

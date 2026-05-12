@@ -570,6 +570,7 @@
   "status.load_more": "o kama e ijo ante",
   "status.media.open": "o open",
   "status.media.show": "o lukin",
+  "status.media.show_logged_out": "sina luka la sina toki e ni: sina jan suli (sina lon tenpo sike pi mute 18 anu mute)",
   "status.media_hidden": "sitelen li len",
   "status.more": "kin",
   "status.mute": "o len e @{name}",

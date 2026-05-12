@@ -454,6 +454,7 @@
   "status.edited_x_times": "Edited {count, plural, one {# time} other {# times}}",
   "status.media.open": "खोलने के लिए क्लिक करें",
   "status.media.show": "दिखाने के लिए क्लिक करें",
+  "status.media.show_logged_out": "क्लिक करके, आप पुष्टि करते हैं कि आप 18 वर्ष या उससे अधिक के हैं",
   "status.mention": "@{name} का उल्लेख करें",
   "status.more": "अतिरिक्त",
   "status.mute": "@{name} म्यूट करें",

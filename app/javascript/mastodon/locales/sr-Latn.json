@@ -627,6 +627,7 @@
   "status.load_more": "Učitaj još",
   "status.media.open": "Kliknite za otvaranje",
   "status.media.show": "Kliknite za prikaz",
+  "status.media.show_logged_out": "Klikom potvrđujete da imate 18 ili više godina",
   "status.media_hidden": "Multimedija sakrivena",
   "status.mention": "Pomeni @{name}",
   "status.more": "Još",

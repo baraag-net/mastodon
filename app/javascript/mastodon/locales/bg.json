@@ -883,6 +883,7 @@
   "status.load_more": "Зареждане на още",
   "status.media.open": "Щракване за отваряне",
   "status.media.show": "Щракване за показване",
+  "status.media.show_logged_out": "С кликването потвърждавате, че сте на 18 или повече години",
   "status.media_hidden": "Мултимедията е скрита",
   "status.mention": "Споменаване на @{name}",
   "status.more": "Още",

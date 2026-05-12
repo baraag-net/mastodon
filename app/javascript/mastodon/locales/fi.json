@@ -909,6 +909,7 @@
   "status.load_more": "Lataa lisää",
   "status.media.open": "Avaa napsauttamalla",
   "status.media.show": "Näytä napsauttamalla",
+  "status.media.show_logged_out": "Klikkaamalla vahvistat, että olet 18-vuotias tai vanhempi",
   "status.media_hidden": "Media piilotettu",
   "status.mention": "Mainitse @{name}",
   "status.more": "Enemmän",

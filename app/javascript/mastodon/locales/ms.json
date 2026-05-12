@@ -629,6 +629,7 @@
   "status.load_more": "Muatkan lagi",
   "status.media.open": "Klik untuk membuka",
   "status.media.show": "Klik untuk menunjukkan",
+  "status.media.show_logged_out": "Dengan mengklik, anda mengesahkan bahawa anda berumur 18 tahun atau lebih",
   "status.media_hidden": "Media disembunyikan",
   "status.mention": "Sebut @{name}",
   "status.more": "Lagi",

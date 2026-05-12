@@ -871,6 +871,7 @@
   "status.load_more": "โหลดเพิ่มเติม",
   "status.media.open": "คลิกเพื่อเปิด",
   "status.media.show": "คลิกเพื่อแสดง",
+  "status.media.show_logged_out": "การคลิกถือเป็นการยืนยันว่าคุณอายุ 18 ปีขึ้นไป",
   "status.media_hidden": "ซ่อนสื่ออยู่",
   "status.mention": "กล่าวถึง @{name}",
   "status.more": "เพิ่มเติม",

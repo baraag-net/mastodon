@@ -909,6 +909,7 @@
   "status.load_more": "Načíst více",
   "status.media.open": "Kliknutím otevřete",
   "status.media.show": "Kliknutím zobrazíte",
+  "status.media.show_logged_out": "Kliknutím potvrzujete, že je vám 18 let nebo více",
   "status.media_hidden": "Média jsou skryta",
   "status.mention": "Zmínit @{name}",
   "status.more": "Více",

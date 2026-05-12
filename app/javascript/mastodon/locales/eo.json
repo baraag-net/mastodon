@@ -873,6 +873,7 @@
   "status.load_more": "Ŝargi pli",
   "status.media.open": "Alklaki por malfermi",
   "status.media.show": "Alklaki por montri",
+  "status.media.show_logged_out": "Per alklako vi konfirmas, ke vi havas 18 jarojn aŭ pli",
   "status.media_hidden": "Vidaŭdaĵo kaŝita",
   "status.mention": "Mencii @{name}",
   "status.more": "Pli",

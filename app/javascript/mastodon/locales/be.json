@@ -909,6 +909,7 @@
   "status.load_more": "Загрузіць яшчэ",
   "status.media.open": "Націсніце, каб адкрыць",
   "status.media.show": "Націсніце, каб паказаць",
+  "status.media.show_logged_out": "Націскаючы, вы пацвярджаеце, што вам 18 гадоў ці больш",
   "status.media_hidden": "Медыя схавана",
   "status.mention": "Згадаць @{name}",
   "status.more": "Больш",

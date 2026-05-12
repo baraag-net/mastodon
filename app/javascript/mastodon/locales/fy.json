@@ -849,6 +849,7 @@
   "status.load_more": "Mear lade",
   "status.media.open": "Klik om te iepenjen",
   "status.media.show": "Klik om te toanen",
+  "status.media.show_logged_out": "Troch te klikken befêstigje jo dat jo 18 jier of âlder binne",
   "status.media_hidden": "Media ferstoppe",
   "status.mention": "@{name} fermelde",
   "status.more": "Mear",

@@ -699,6 +699,7 @@
   "status.load_more": "載入更多",
   "status.media.open": "點擊以打開",
   "status.media.show": "點擊以顯示",
+  "status.media.show_logged_out": "點擊即表示你確認已年滿 18 歲或以上",
   "status.media_hidden": "隱藏媒體內容",
   "status.mention": "提及 @{name}",
   "status.more": "更多",

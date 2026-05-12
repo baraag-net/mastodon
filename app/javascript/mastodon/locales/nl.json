@@ -909,6 +909,7 @@
   "status.load_more": "Meer laden",
   "status.media.open": "Klik om te openen",
   "status.media.show": "Klik om te tonen",
+  "status.media.show_logged_out": "Door te klikken bevestig je dat je 18 jaar of ouder bent",
   "status.media_hidden": "Media verborgen",
   "status.mention": "@{name} vermelden",
   "status.more": "Meer",

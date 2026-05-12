@@ -909,6 +909,7 @@
   "status.load_more": "Загрузить ещё",
   "status.media.open": "Нажмите, чтобы открыть.",
   "status.media.show": "Нажмите, чтобы показать",
+  "status.media.show_logged_out": "Нажимая, вы подтверждаете, что вам 18 лет или больше",
   "status.media_hidden": "Медиа скрыты",
   "status.mention": "Упомянуть @{name}",
   "status.more": "Ещё",

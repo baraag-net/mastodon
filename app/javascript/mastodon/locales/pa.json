@@ -609,6 +609,7 @@
   "status.load_more": "ਹੋਰ ਦਿਖਾਓ",
   "status.media.open": "ਖੋਲ੍ਹਣ ਲਈ ਕਲਿੱਕ ਕਰੋ",
   "status.media.show": "ਵੇਖਾਉਣ ਲਈ ਕਲਿੱਕ ਕਰੋ",
+  "status.media.show_logged_out": "ਕਲਿੱਕ ਕਰਕੇ, ਤੁਸੀਂ ਪੁਸ਼ਟੀ ਕਰਦੇ ਹੋ ਕਿ ਤੁਹਾਡੀ ਉਮਰ 18 ਸਾਲ ਜਾਂ ਵੱਧ ਹੈ",
   "status.media_hidden": "ਮੀਡਿਆ ਲੁਕਵਾਂ ਹੈ",
   "status.mention": "@{name} ਦਾ ਜ਼ਿਕਰ",
   "status.more": "ਹੋਰ",

@@ -909,6 +909,7 @@
   "status.load_more": "Kargatu gehiago",
   "status.media.open": "Egin klik irekitzeko",
   "status.media.show": "Egin klik erakusteko",
+  "status.media.show_logged_out": "Klik eginez, 18 urte edo gehiago dituzula baieztatzen duzu",
   "status.media_hidden": "Multimedia ezkutatua",
   "status.mention": "Aipatu @{name}",
   "status.more": "Gehiago",

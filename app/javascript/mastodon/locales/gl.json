@@ -909,6 +909,7 @@
   "status.load_more": "Cargar máis",
   "status.media.open": "Preme para abrir",
   "status.media.show": "Preme para ver",
+  "status.media.show_logged_out": "Ao premer, confirmas que tes 18 anos ou máis",
   "status.media_hidden": "Contido multimedia agochado",
   "status.mention": "Mencionar @{name}",
   "status.more": "Máis",

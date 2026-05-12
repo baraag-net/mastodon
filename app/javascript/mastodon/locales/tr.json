@@ -909,6 +909,7 @@
   "status.load_more": "Daha fazlası",
   "status.media.open": "Açmak için tıklayın",
   "status.media.show": "Göstermek için tıklayın",
+  "status.media.show_logged_out": "Tıklayarak 18 yaş veya üzerinde olduğunuzu beyan etmiş olursunuz",
   "status.media_hidden": "Medya gizli",
   "status.mention": "@{name} kişisinden bahset",
   "status.more": "Daha fazla",

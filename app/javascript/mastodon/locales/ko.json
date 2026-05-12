@@ -909,6 +909,7 @@
   "status.load_more": "더보기",
   "status.media.open": "클릭하여 열기",
   "status.media.show": "클릭하여 보기",
+  "status.media.show_logged_out": "클릭하면 18세 이상임을 확인합니다",
   "status.media_hidden": "미디어 숨겨짐",
   "status.mention": "@{name} 님에게 멘션",
   "status.more": "자세히",

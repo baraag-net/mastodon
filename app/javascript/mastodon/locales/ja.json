@@ -880,6 +880,7 @@
   "status.load_more": "もっと見る",
   "status.media.open": "クリックして開く",
   "status.media.show": "クリックして表示",
+  "status.media.show_logged_out": "クリックすることで、あなたが18歳以上であることを認めます",
   "status.media_hidden": "非表示のメディア",
   "status.mention": "@{name}さんに投稿",
   "status.more": "もっと見る",

@@ -909,6 +909,7 @@
   "status.load_more": "Last inn meir",
   "status.media.open": "Klikk for å opne",
   "status.media.show": "Klikk for å vise",
+  "status.media.show_logged_out": "Ved å klikke stadfester du at du er 18 år eller eldre",
   "status.media_hidden": "Mediet er gøymt",
   "status.mention": "Nemn @{name}",
   "status.more": "Meir",

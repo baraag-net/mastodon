@@ -888,6 +888,7 @@
   "status.load_more": "Завантажити більше",
   "status.media.open": "Натисніть, щоб відкрити",
   "status.media.show": "Натисніть, щоб показати",
+  "status.media.show_logged_out": "Натискаючи, ви підтверджуєте, що вам 18 років або більше",
   "status.media_hidden": "Медіа приховано",
   "status.mention": "Згадати @{name}",
   "status.more": "Більше",

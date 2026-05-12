@@ -909,6 +909,7 @@
   "status.load_more": "Tải thêm",
   "status.media.open": "Nhấn để mở",
   "status.media.show": "Nhấn để xem",
+  "status.media.show_logged_out": "Bằng cách nhấp, bạn xác nhận đã 18 tuổi trở lên",
   "status.media_hidden": "Đã ẩn",
   "status.mention": "Nhắc đến @{name}",
   "status.more": "Xem thêm",

@@ -909,6 +909,7 @@
   "status.load_more": "טען עוד",
   "status.media.open": "לחץ לפתיחה",
   "status.media.show": "לחץ להצגה",
+  "status.media.show_logged_out": "בלחיצה, אתה מאשר שגילך 18 ומעלה",
   "status.media_hidden": "מדיה מוסתרת",
   "status.mention": "פניה אל @{name}",
   "status.more": "עוד",

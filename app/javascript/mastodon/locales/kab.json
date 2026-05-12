@@ -689,6 +689,7 @@
   "status.load_more": "Sali ugar",
   "status.media.open": "Sit i ulday",
   "status.media.show": "Sit i uskan",
+  "status.media.show_logged_out": "S usiti, tetḥeqqeqeḍ belli ɣur-k 18 iseggasen neɣ ugar",
   "status.media_hidden": "Amidya yettwaffer",
   "status.mention": "Bder-d @{name}",
   "status.more": "Ugar",

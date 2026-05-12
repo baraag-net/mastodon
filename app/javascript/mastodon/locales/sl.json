@@ -868,6 +868,7 @@
   "status.load_more": "Naloži več",
   "status.media.open": "Kliknite za odpiranje",
   "status.media.show": "Kliknite za prikaz",
+  "status.media.show_logged_out": "S klikom potrjujete, da ste stari 18 let ali več",
   "status.media_hidden": "Predstavnosti so skrite",
   "status.mention": "Omeni @{name}",
   "status.more": "Več",

@@ -909,6 +909,7 @@
   "status.load_more": "Ver mais",
   "status.media.open": "Clique para abrir",
   "status.media.show": "Clique para mostrar",
+  "status.media.show_logged_out": "Ao clicar, você confirma ter 18 anos ou mais",
   "status.media_hidden": "Mídia sensível",
   "status.mention": "Mencionar @{name}",
   "status.more": "Mais",

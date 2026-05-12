@@ -909,6 +909,7 @@
   "status.load_more": "Lódáil a thuilleadh",
   "status.media.open": "Cliceáil chun oscailt",
   "status.media.show": "Cliceáil chun a thaispeáint",
+  "status.media.show_logged_out": "Trí chliceáil, dearbhaíonn tú go bhfuil tú 18 mbliana d'aois nó níos sine",
   "status.media_hidden": "Cuirtear meáin i bhfolach",
   "status.mention": "Luaigh @{name}",
   "status.more": "Tuilleadh",

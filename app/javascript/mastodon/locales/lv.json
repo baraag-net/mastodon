@@ -778,6 +778,7 @@
   "status.load_more": "Ielādēt vairāk",
   "status.media.open": "Jānoklikšķina, lai atvērtu",
   "status.media.show": "Noklikšķini, lai parādītu",
+  "status.media.show_logged_out": "Noklikšķinot apstiprināt, ka esat 18 gadus vecs vai vecāks",
   "status.media_hidden": "Multivides ir paslēpts",
   "status.mention": "Pieminēt @{name}",
   "status.more": "Vairāk",

@@ -882,6 +882,7 @@
   "status.load_more": "حمّل المزيد",
   "status.media.open": "اضغط للفتح",
   "status.media.show": "اضغط لإظهارها",
+  "status.media.show_logged_out": "بالنقر، أنت تؤكد أنك تبلغ من العمر 18 عامًا أو أكثر",
   "status.media_hidden": "وسائط مخفية",
   "status.mention": "أذكُر @{name}",
   "status.more": "المزيد",

@@ -683,6 +683,7 @@
   "status.load_more": "Kargañ muioc'h",
   "status.media.open": "Klikit evit digeriñ",
   "status.media.show": "Klikit evit diskouez",
+  "status.media.show_logged_out": "En ur glikañ, e kadarnait ho peus 18 vloaz pe muioc'h",
   "status.media_hidden": "Media kuzhet",
   "status.mention": "Menegiñ @{name}",
   "status.more": "Muioc'h",

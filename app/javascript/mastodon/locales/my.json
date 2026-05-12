@@ -515,6 +515,7 @@
   "status.load_more": "ပို၍ဆောင်ရွက်ပါ",
   "status.media.open": "ဖွင့်ရန်နှိပ်ပါ",
   "status.media.show": "ပြရန်နှိပ်ပါ",
+  "status.media.show_logged_out": "နှိပ်ခြင်းဖြင့် သင်သည် အသက် ၁၈ နှစ်ပြည့်ပြီး သို့မဟုတ် ၎င်းထက်ကြီးကြောင်း အတည်ပြုသည်",
   "status.media_hidden": "မီဒီယာကို ဖျောက်ထားပါ",
   "status.mention": "@{name} ကို ဖော်ပြထားသည်",
   "status.more": "နောက်ထပ်",

@@ -518,6 +518,7 @@
   "status.load_more": "Încarcă mai multe",
   "status.media.open": "Click pentru a deschide",
   "status.media.show": "Click pentru a afișa",
+  "status.media.show_logged_out": "Făcând clic, confirmi că ai 18 ani sau mai mult",
   "status.media_hidden": "Media ascunsă",
   "status.mention": "Menționează pe @{name}",
   "status.more": "Mai mult",

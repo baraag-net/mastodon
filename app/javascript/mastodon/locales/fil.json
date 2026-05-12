@@ -384,6 +384,7 @@
   "status.history.edited": "Binago ni/ng {name} {date}",
   "status.media.open": "Pindutin upang buksan",
   "status.media.show": "Pindutin upang ipakita",
+  "status.media.show_logged_out": "Sa pag-click, pinatutunayan mong 18 taong gulang o mas matanda ka",
   "status.mention": "Banggitin ang/si @{name}",
   "status.more": "Higit pa",
   "status.read_more": "Basahin ang higit pa",

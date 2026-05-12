@@ -909,6 +909,7 @@
   "status.load_more": "加载更多",
   "status.media.open": "点击打开",
   "status.media.show": "点击查看",
+  "status.media.show_logged_out": "点击即表示你确认已年满 18 岁或以上",
   "status.media_hidden": "媒体已隐藏",
   "status.mention": "提及 @{name}",
   "status.more": "更多",

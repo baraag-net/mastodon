@@ -813,6 +813,7 @@
   "status.load_more": "Načitať viac",
   "status.media.open": "Otvoriť kliknutím",
   "status.media.show": "Zobraziť kliknutím",
+  "status.media.show_logged_out": "Kliknutím potvrdzujete, že máte 18 alebo viac rokov",
   "status.media_hidden": "Skryté médiá",
   "status.mention": "Označiť @{name}",
   "status.more": "Viac",

@@ -909,6 +909,7 @@
   "status.load_more": "Hlaða inn meiru",
   "status.media.open": "Smelltu til að opna",
   "status.media.show": "Smelltu til að birta",
+  "status.media.show_logged_out": "Með því að smella staðfestir þú að þú sért 18 ára eða eldri",
   "status.media_hidden": "Mynd er falin",
   "status.mention": "Minnast á @{name}",
   "status.more": "Meira",

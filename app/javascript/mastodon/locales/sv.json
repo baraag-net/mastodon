@@ -909,6 +909,7 @@
   "status.load_more": "Ladda fler",
   "status.media.open": "Klicka för att öppna",
   "status.media.show": "Klicka för att visa",
+  "status.media.show_logged_out": "Genom att klicka bekräftar du att du är 18 år eller äldre",
   "status.media_hidden": "Media dold",
   "status.mention": "Omnämn @{name}",
   "status.more": "Mer",

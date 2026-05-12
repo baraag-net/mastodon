@@ -909,6 +909,7 @@
   "status.load_more": "Φόρτωσε περισσότερα",
   "status.media.open": "Κάνε κλικ για άνοιγμα",
   "status.media.show": "Κάνε κλικ για εμφάνιση",
+  "status.media.show_logged_out": "Κάνοντας κλικ, επιβεβαιώνετε ότι είστε 18 ετών ή μεγαλύτεροι",
   "status.media_hidden": "Κρυμμένο πολυμέσο",
   "status.mention": "Επισήμανση @{name}",
   "status.more": "Περισσότερα",

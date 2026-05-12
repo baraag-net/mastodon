@@ -18,7 +18,7 @@ import { Blurhash } from 'mastodon/components/blurhash';
 import { Icon }  from 'mastodon/components/icon';
 import { MoreFromAuthor } from 'mastodon/components/more_from_author';
 import { RelativeTimestamp } from 'mastodon/components/relative_timestamp';
-import { useBlurhash } from 'mastodon/initial_state';
+import { me, useBlurhash } from 'mastodon/initial_state';
 
 const IDNA_PREFIX = 'xn--';
 
@@ -189,7 +189,7 @@ export default class Card extends PureComponent {
       <button type='button' onClick={this.handleReveal} className='spoiler-button__overlay'>
         <span className='spoiler-button__overlay__label'>
           <FormattedMessage id='status.sensitive_warning' defaultMessage='Sensitive content' />
-          <span className='spoiler-button__overlay__action'><FormattedMessage id='status.media.show' defaultMessage='Click to show' /></span>
+          <span className='spoiler-button__overlay__action'>{me ? <FormattedMessage id='status.media.show' defaultMessage='Click to show' /> : <FormattedMessage id='status.media.show_logged_out' defaultMessage='By clicking, you affirm to be 18+ or older' />}</span>
         </span>
       </button>
     );

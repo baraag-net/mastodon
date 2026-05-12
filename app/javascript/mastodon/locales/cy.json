@@ -909,6 +909,7 @@
   "status.load_more": "Llwythwch ragor",
   "status.media.open": "Cliciwch i agor",
   "status.media.show": "Cliciwch i ddangos",
+  "status.media.show_logged_out": "Drwy glicio, rwyt yn cadarnhau dy fod yn 18 oed neu hŷn",
   "status.media_hidden": "Cyfryngau wedi'u cuddio",
   "status.mention": "Crybwyll @{name}",
   "status.more": "Rhagor",

@@ -905,6 +905,7 @@
   "status.load_more": "Ngarko më tepër",
   "status.media.open": "Klikoni për hapje",
   "status.media.show": "Klikoni për shfaqje",
+  "status.media.show_logged_out": "Duke klikuar, ju pohoni se jeni 18 vjeç ose më të rritur",
   "status.media_hidden": "Me media të fshehur",
   "status.mention": "Përmendni @{name}",
   "status.more": "Më tepër",

@@ -909,6 +909,7 @@
   "status.load_more": "Laadi veel",
   "status.media.open": "Avamiseks klõpsa",
   "status.media.show": "Näitamiseks klõpsa",
+  "status.media.show_logged_out": "Klõpsates kinnitad, et oled 18-aastane või vanem",
   "status.media_hidden": "Meedia peidetud",
   "status.mention": "Maini @{name}'i",
   "status.more": "Veel",

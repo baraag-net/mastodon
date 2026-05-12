@@ -843,6 +843,7 @@
   "status.load_more": "Daha çoxunu yüklə",
   "status.media.open": "Açmaq üçün kliklə",
   "status.media.show": "Göstərmək üçün kliklə",
+  "status.media.show_logged_out": "Klikləməklə, 18+ yaş və ya daha böyük olduğunuzu təsdiq edirsiniz",
   "status.media_hidden": "Media gizlidir",
   "status.mention": "Adını çək: @{name}",
   "status.more": "Daha çox",

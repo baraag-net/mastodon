@@ -909,6 +909,7 @@
   "status.load_more": "Carrega'n més",
   "status.media.open": "Clica per obrir",
   "status.media.show": "Clica per a mostrar",
+  "status.media.show_logged_out": "En fer clic, confirmes que tens 18 anys o més",
   "status.media_hidden": "Contingut amagat",
   "status.mention": "Esmenta @{name}",
   "status.more": "Més",

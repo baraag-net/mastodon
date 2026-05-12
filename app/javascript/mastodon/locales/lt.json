@@ -905,6 +905,7 @@
   "status.load_more": "Krauti daugiau",
   "status.media.open": "Spausk, kad atidaryti",
   "status.media.show": "Spausk, kad matyti",
+  "status.media.show_logged_out": "Spustelėdami patvirtinate, kad esate 18 metų ar vyresni",
   "status.media_hidden": "Paslėpta medija",
   "status.mention": "Paminėti @{name}",
   "status.more": "Daugiau",

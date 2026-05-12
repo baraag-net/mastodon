@@ -2,6 +2,8 @@ import { FormattedMessage } from 'react-intl';
 
 import classNames from 'classnames';
 
+import { me } from 'mastodon/initial_state';
+
 interface Props {
   hidden?: boolean;
   sensitive: boolean;
@@ -19,6 +21,15 @@ export const SpoilerButton: React.FC<Props> = ({
 }) => {
   let warning;
   let action;
+
+  const showAction = me ? (
+    <FormattedMessage id='status.media.show' defaultMessage='Click to show' />
+  ) : (
+    <FormattedMessage
+      id='status.media.show_logged_out'
+      defaultMessage='By clicking, you affirm to be 18+ or older'
+    />
+  );
 
   if (uncached) {
     warning = (
@@ -41,9 +52,7 @@ export const SpoilerButton: React.FC<Props> = ({
         }}
       />
     );
-    action = (
-      <FormattedMessage id='status.media.show' defaultMessage='Click to show' />
-    );
+    action = showAction;
   } else if (sensitive) {
     warning = (
       <FormattedMessage
@@ -51,9 +60,7 @@ export const SpoilerButton: React.FC<Props> = ({
         defaultMessage='Sensitive content'
       />
     );
-    action = (
-      <FormattedMessage id='status.media.show' defaultMessage='Click to show' />
-    );
+    action = showAction;
   } else {
     warning = (
       <FormattedMessage
@@ -61,9 +68,7 @@ export const SpoilerButton: React.FC<Props> = ({
         defaultMessage='Media hidden'
       />
     );
-    action = (
-      <FormattedMessage id='status.media.show' defaultMessage='Click to show' />
-    );
+    action = showAction;
   }
 
   return (

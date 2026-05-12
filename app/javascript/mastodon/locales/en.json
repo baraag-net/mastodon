@@ -909,6 +909,7 @@
   "status.load_more": "Load more",
   "status.media.open": "Click to open",
   "status.media.show": "Click to show",
+  "status.media.show_logged_out": "By clicking, you affirm to be 18+ or older",
   "status.media_hidden": "Media hidden",
   "status.mention": "Mention @{name}",
   "status.more": "More",

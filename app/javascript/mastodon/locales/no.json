@@ -850,6 +850,7 @@
   "status.load_more": "Last mer",
   "status.media.open": "Klikk for å åpne",
   "status.media.show": "Klikk for å vise",
+  "status.media.show_logged_out": "Ved å klikke bekrefter du at du er 18 år eller eldre",
   "status.media_hidden": "Media skjult",
   "status.mention": "Nevn @{name}",
   "status.more": "Mer",

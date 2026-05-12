@@ -816,6 +816,7 @@
   "status.load_more": "තව පූරණය",
   "status.media.open": "විවෘත කිරීමට ක්ලික් කරන්න",
   "status.media.show": "පෙන්වීමට ක්ලික් කරන්න",
+  "status.media.show_logged_out": "ක්ලික් කිරීමෙන්, ඔබට වයස අවුරුදු 18 හෝ ඊට වැඩි බව ඔබ සහතික කරයි",
   "status.media_hidden": "මාධ්‍ය සඟවා ඇත",
   "status.mention": "@{name} සඳහන් කරන්ක",
   "status.more": "තව",

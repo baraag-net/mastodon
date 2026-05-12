@@ -909,6 +909,7 @@
   "status.load_more": "بار کردن بیش‌تر",
   "status.media.open": "کلیک برای گشودن",
   "status.media.show": "کلیک برای نمایش",
+  "status.media.show_logged_out": "با کلیک کردن، تأیید می‌کنید که ۱۸ سال یا بیشتر دارید",
   "status.media_hidden": "رسانهٔ نهفته",
   "status.mention": "اشاره به ‎@{name}",
   "status.more": "بیشتر",
