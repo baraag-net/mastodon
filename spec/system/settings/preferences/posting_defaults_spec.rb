@@ -13,10 +13,10 @@ RSpec.describe 'Settings preferences posting defaults page' do
     expect(page)
       .to have_private_cache_control
 
-    check mark_sensitive_field
+    uncheck mark_sensitive_field
 
     expect { save_changes }
-      .to change { user.reload.settings.default_sensitive }.to(true)
+      .to change { user.reload.settings.default_sensitive }.to(false)
     expect(page)
       .to have_title(I18n.t('preferences.posting_defaults'))
   end

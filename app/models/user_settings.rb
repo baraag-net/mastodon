@@ -13,7 +13,7 @@ class UserSettings
   setting :noindex, default: -> { ::Setting.noindex }
   setting :show_application, default: true
   setting :default_language, default: nil
-  setting :default_sensitive, default: false
+  setting :default_sensitive, default: true
   setting :default_privacy, default: nil, in: %w(public unlisted private)
   setting :default_quote_policy, default: 'public', in: %w(public followers nobody)
 
@@ -34,7 +34,7 @@ class UserSettings
     setting :missing_alt_text_modal, default: true
     setting :reduce_motion, default: false
     setting :expand_content_warnings, default: false
-    setting :display_media, default: 'default', in: %w(default show_all hide_all)
+    setting :display_media, default: 'show_all', in: %w(default show_all hide_all)
     setting :auto_play, default: false
     setting :emoji_style, default: 'auto', in: %w(auto native twemoji)
   end
