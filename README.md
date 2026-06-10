@@ -11,6 +11,7 @@
 - **Adult content rating meta tags.** Adds `rating: adult` and the RTA label to the application layout `<head>`.
 - **Logged-out sensitive-content age gate.** Spoiler overlay shows "By clicking, you affirm to be 18+ or older" instead of "Click to show" for visitors who aren't signed in.
 - **Sensitive-media defaults flipped.** New users mark uploads sensitive by default and always show sensitive media.
+- **Unblurred compose previews.** Upload thumbnails stay visible even with a CW, with a "Sensitive" pill marking sensitive media.
 
 ---
 
