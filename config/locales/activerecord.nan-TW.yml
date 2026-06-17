@@ -20,7 +20,3 @@ nan-TW:
           attributes:
             effective_date:
               too_soon: 傷緊ah，著khah uànn佇 %{date}
-        user_invite_request:
-          attributes:
-            text:
-              missing_url: 讀規則

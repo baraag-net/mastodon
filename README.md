@@ -6,7 +6,6 @@
 - **Manual review URL requirement enforced server-side.** Approval-based sign-ups without a valid invite must include at least one full URL in the reason, on both the web flow and `/api/v1/accounts`. (`2026af3`)
 - **`DISABLE_REGISTRATION_REASON_URL_REQUIREMENT` env var.** When `true`, falls back to upstream `require_invite_text` behavior instead of requiring a URL. (`160bca9`)
 - **`REGISTRATION_ART_SUBMISSION_EMAIL` env var.** When set, the sign-up reason field shows a hint offering this address as an email fallback for applicants who cannot provide link examples. (`c5dc611`)
-- **Mastodon (Yellow) theme.** Dark theme variant that retints the default blurple accents to yellow. (`ace3b16`)
 - **New logo.** Refreshed `logo.svg`, `logo-symbol-icon.svg`, and `logo-symbol-wordmark.svg` artwork. (`be95bec`)
 - **Adult content rating meta tags.** Adds `rating: adult` and the RTA label to the application layout `<head>`.
 - **Logged-out sensitive-content age gate.** Spoiler overlay shows "By clicking, you affirm to be 18+ or older" instead of "Click to show" for visitors who aren't signed in.
@@ -21,7 +20,7 @@
 
 <p align="center">
   <a style="text-decoration:none" href="https://www.youtube.com/watch?v=IPSbNdBmWKE">
-    <img alt="Mastodon hero image" src="https://github.com/user-attachments/assets/ef53f5e9-c0d8-484d-9f53-00efdebb92c3" />
+    <img alt="Mastodon hero image" src="./docs/hero-nodes.gif" />
   </a>
 </p>
 
@@ -73,10 +72,11 @@ Mastodon is a **free, open-source social network server** based on [ActivityPub]
 
 ### Requirements
 
-- **Ruby** 3.2+
+- **Ruby** 3.3+
 - **PostgreSQL** 14+
 - **Redis** 7.0+
-- **Node.js** 20+
+- **Node.js** 22+
+- **FFmpeg** 5.1+
 
 This repository includes deployment configurations for **Docker and docker-compose**, as well as for other environments like Heroku and Scalingo. For Helm charts, reference the [mastodon/chart repository](https://github.com/mastodon/chart). A [**standalone** installation guide](https://docs.joinmastodon.org/admin/install/) is available in the main documentation.
 

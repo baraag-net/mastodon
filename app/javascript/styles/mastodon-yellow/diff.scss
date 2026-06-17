@@ -1,6 +1,0 @@
-// Targets that hardcode a blurple value rather than going through a
-// configurable variable, so they can't be retinted by the variables override.
-
-.notification-bar__action {
-  color: #fde68a; // was $blurple-300
-}
