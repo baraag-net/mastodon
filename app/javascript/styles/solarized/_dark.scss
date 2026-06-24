@@ -1,0 +1,20 @@
+@use '../mastodon/theme/dark' as base;
+
+// Solarized Dark.
+
+// Inherit every default dark token (they all reference the palette, which we've
+// remapped to Solarized) and only nudge the neutral text tones onto Solarized's
+// content colors (base0/base1) instead of the bright cream the default theme
+// uses, for the muted, low-contrast look Solarized is known for. Backgrounds
+// (base03/base02) come through unchanged from the palette.
+@mixin tokens {
+  @include base.tokens;
+
+  --color-text-primary: var(--color-grey-200);
+  --color-text-secondary: var(--color-grey-400); // base1
+  --color-text-tertiary: var(--color-grey-500); // base0
+}
+
+@mixin contrast-overrides {
+  @include base.contrast-overrides;
+}

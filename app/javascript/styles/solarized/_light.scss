@@ -1,0 +1,29 @@
+@use '../mastodon/theme/light' as base;
+
+// Solarized Light.
+
+// Inherit the default light tokens, then swap the white backgrounds for
+// Solarized's warm paper tones (base3/base2) and tune the neutral text onto
+// Solarized's content colors (base02/base00). Accents come from the remapped
+// palette automatically.
+@mixin tokens {
+  @include base.tokens;
+
+  // Backgrounds — Solarized light is warm paper, not pure white.
+  --color-bg-primary: var(--color-grey-50); // base3
+  --color-bg-secondary: var(--color-grey-100); // base2
+  --color-bg-tertiary: var(--color-grey-200);
+
+  // Text
+  --color-text-primary: var(--color-grey-800); // base02
+  --color-text-secondary: var(--color-grey-600); // base00
+  --color-text-tertiary: var(--color-grey-500); // base0
+  --color-text-inverted: var(--color-grey-50); // cream on dark surfaces
+
+  // Borders
+  --color-border-primary: var(--color-grey-200);
+}
+
+@mixin contrast-overrides {
+  @include base.contrast-overrides;
+}

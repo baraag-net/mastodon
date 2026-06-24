@@ -1,0 +1,37 @@
+// Wires the Solarized palette and tokens to the same color-scheme / contrast
+// attributes the default theme uses, so the existing dark/light toggle and the
+// high-contrast preference keep working unchanged.
+
+@use 'palette';
+@use 'dark';
+@use 'light';
+@use '../mastodon/theme/utils';
+
+html {
+  @include palette.palette;
+}
+
+[data-color-scheme='dark'],
+html:not([data-color-scheme]) {
+  color-scheme: dark;
+
+  @include dark.tokens;
+  @include utils.invert-on-dark;
+
+  &[data-contrast='high'],
+  [data-contrast='high'] & {
+    @include dark.contrast-overrides;
+  }
+}
+
+[data-color-scheme='light'] {
+  color-scheme: light;
+
+  @include light.tokens;
+  @include utils.invert-on-light;
+
+  &[data-contrast='high'],
+  [data-contrast='high'] & {
+    @include light.contrast-overrides;
+  }
+}

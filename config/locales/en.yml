@@ -2194,6 +2194,7 @@ en:
     title: The terms of service of %{domain} are changing
   themes:
     default: Mastodon
+    solarized: Solarized
   time:
     formats:
       default: "%b %d, %Y, %H:%M"

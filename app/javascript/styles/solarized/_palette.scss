@@ -1,0 +1,78 @@
+// Solarized by Ethan Schoonover — https://ethanschoonover.com/solarized/
+
+// Solarized only defines eight monotone "base" tones plus eight accents, while
+// Mastodon's palette expects an 11-step ramp per color. We map the canonical
+// Solarized values onto the steps the semantic tokens actually reference and
+// interpolate the in-between steps so backgrounds, borders, and text stay
+// cohesive. The default dark/light token mixins read from these slots, so
+// remapping the palette re-colors the entire UI.
+
+@mixin palette {
+  --color-white: #fff;
+  --color-black: #000;
+
+  // Monotone base tones, lightest (base3) to darkest (base03).
+  --color-grey-50: #fdf6e3; // base3  — light-mode background
+  --color-grey-100: #eee8d5; // base2  — light-mode highlights
+  --color-grey-200: #ddd6c1;
+  --color-grey-300: #c3bca7;
+  --color-grey-400: #93a1a1; // base1  — emphasized content
+  --color-grey-500: #839496; // base0  — primary content (dark)
+  --color-grey-600: #657b83; // base00 — primary content (light)
+  --color-grey-700: #586e75; // base01 — secondary content
+  --color-grey-800: #073642; // base02 — dark-mode highlights
+  --color-grey-900: #04303c;
+  --color-grey-950: #002b36; // base03 — dark-mode background
+
+  // Brand — Solarized blue (#268bd2 at step 700, where the brand base sits).
+  --color-indigo-50: #e9f4fc;
+  --color-indigo-100: #c8e4f8;
+  --color-indigo-200: #97cdf0;
+  --color-indigo-300: #66b4e7;
+  --color-indigo-400: #46a0de;
+  --color-indigo-500: #2f93d8;
+  --color-indigo-600: #2a8ed5;
+  --color-indigo-700: #268bd2; // Solarized blue
+  --color-indigo-800: #2176b3;
+  --color-indigo-900: #1a5c8c;
+  --color-indigo-950: #103a57;
+
+  // Error — Solarized red (#dc322f at step 700).
+  --color-red-50: #fdecec;
+  --color-red-100: #fbd5d4;
+  --color-red-200: #f6abaa;
+  --color-red-300: #ef7e7c;
+  --color-red-400: #e85551;
+  --color-red-500: #e03b38;
+  --color-red-600: #dd3633;
+  --color-red-700: #dc322f; // Solarized red
+  --color-red-800: #b82926;
+  --color-red-900: #8f201e;
+  --color-red-950: #551312;
+
+  // Warning — Solarized yellow (#b58900 at step 600).
+  --color-yellow-50: #fbf3da;
+  --color-yellow-100: #f6e4ad;
+  --color-yellow-200: #eecd66;
+  --color-yellow-300: #e3b833;
+  --color-yellow-400: #d6a517;
+  --color-yellow-500: #c79600;
+  --color-yellow-600: #b58900; // Solarized yellow
+  --color-yellow-700: #9a7400;
+  --color-yellow-800: #7e5f00;
+  --color-yellow-900: #5f4700;
+  --color-yellow-950: #3a2c00;
+
+  // Success — Solarized green (#859900 at step 600).
+  --color-green-50: #f3f5db;
+  --color-green-100: #e4e9ad;
+  --color-green-200: #ccd566;
+  --color-green-300: #b3c233;
+  --color-green-400: #9fb019;
+  --color-green-500: #94a30c;
+  --color-green-600: #859900; // Solarized green
+  --color-green-700: #6f8000;
+  --color-green-800: #586600;
+  --color-green-900: #414b00;
+  --color-green-950: #272d00;
+}
