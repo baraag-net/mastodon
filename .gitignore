@@ -19,6 +19,7 @@
 /tmp
 /coverage
 /public/system
+/public/system-dev
 /public/assets
 /public/packs
 /public/packs-dev

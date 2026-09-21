@@ -5,10 +5,17 @@
 @use 'palette';
 @use 'dark';
 @use 'light';
-@use '../mastodon/theme/utils';
+@use '../mastodon/tokens/theme/utils';
+@use '../mastodon/tokens/shape';
+@use '../mastodon/tokens/type';
 
 html {
   @include palette.palette;
+  @include shape.space;
+  @include shape.radius;
+  @include type.font-size;
+  @include type.line-height;
+  @include type.letter-spacing;
 }
 
 [data-color-scheme='dark'],

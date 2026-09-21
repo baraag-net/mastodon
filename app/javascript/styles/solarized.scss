@@ -1,7 +1,7 @@
 // Solarized theme entrypoint.
 
 // Identical to styles/application.scss except that the default color theme
-// (`mastodon/theme`) is swapped for the Solarized palette and tokens
+// (`mastodon/tokens`) is swapped for the Solarized palette and tokens
 // (`solarized/index`). Everything else — layout, components, forms, admin —
 // is shared, and reads its colors from the same CSS custom properties, so the
 // Solarized module only has to redefine those.
@@ -10,6 +10,8 @@
 @use 'mastodon/mixins';
 @use 'fonts/roboto';
 @use 'fonts/roboto-mono';
+@use 'fonts/inter';
+@use 'fonts/syne';
 
 @use 'mastodon/reset';
 @use 'solarized/index';
